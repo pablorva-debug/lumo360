@@ -1,0 +1,1528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumo360 – AI Interview Software for Transparent, Scalable Hiring</title>
+<meta name="description" content="Lumo360 is an AI interviewing platform that conducts natural candidate conversations and gives your team fully transparent, evidence-backed hiring decisions. Book a demo.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lumo360.io">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M 26 10 A 12 12 0 1 0 26 22' stroke='%230D1F35' stroke-width='2.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M 22 12.5 A 7 7 0 1 0 22 19.5' stroke='%230D1F35' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%230D1F35'/%3E%3C/svg%3E">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lumo360.io">
+<meta property="og:title" content="Lumo360 – AI Interview Software for Transparent, Scalable Hiring">
+<meta property="og:description" content="AI-powered screening that feels human and keeps every decision fully explainable. Scale your interviews without the black box.">
+<meta property="og:image" content="https://lumo360.io/og-image.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lumo360 – AI Interview Software for Transparent, Scalable Hiring">
+<meta name="twitter:description" content="AI-powered screening that feels human and keeps every decision fully explainable.">
+<meta name="twitter:image" content="https://lumo360.io/og-image.jpg">
+
+<!-- Schema: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Lumo360",
+  "url": "https://lumo360.io",
+  "applicationCategory": "BusinessApplication",
+  "description": "Lumo360 is an AI interviewing platform that conducts natural, adaptive candidate conversations and delivers fully transparent, evidence-backed hiring decisions.",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP",
+    "description": "Book a demo to get started"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Lumo360",
+    "url": "https://lumo360.io"
+  }
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Lumo360?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lumo360 is an AI interviewing platform that conducts natural, adaptive conversations with candidates and provides hiring teams with fully transparent, evidence-backed evaluation reports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Lumo360 different from other AI hiring tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike black-box AI screening tools, Lumo360 makes every evaluation decision fully traceable. Your team can see the exact transcript moments that led to each recommendation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Lumo360 replace human interviewers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Lumo360 handles scalable first-round screening so your team can focus their time on the most promising candidates. Every AI recommendation is transparent and reviewable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get started with Lumo360?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book a demo directly on the Lumo360 website at lumo360.io. The team will walk you through setup and help you configure your first screening workflow."
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Brand Identity palette */
+    --ink-900: #0D1F35;
+    --ink-800: #1A3252;
+    --ink-700: #1E4A7A;
+    --ink-600: #2060A8;
+    --ink-500: #3178C6;
+    --ink-400: #5B9BD5;
+    --ink-300: #93BFEA;
+    --ink-200: #C5DDEF;
+    --ink-100: #E8F2FA;
+    --ink-50:  #F4F8FC;
+    --neutral-900: #1A1D23;
+    --neutral-700: #3D4450;
+    --neutral-500: #6B7280;
+    --neutral-300: #B0B8C4;
+    --neutral-200: #D8DCE3;
+    --neutral-100: #EFF1F4;
+    --neutral-50:  #F9FAFB;
+    --white: #FFFFFF;
+    --accent-teal: #1A8A7A;
+    --accent-teal-light: #E4F5F2;
+
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', system-ui, sans-serif;
+
+    --radius-card: 16px;
+    --radius-pill: 100px;
+    --border-default: 1px solid #D8DCE3;
+    --shadow-card: 0 1px 4px rgba(13,31,53,0.06);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 15px; scroll-behavior: smooth; }
+
+  body {
+    background: var(--neutral-50);
+    color: var(--neutral-900);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .page { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
+
+  @media (max-width: 768px) {
+    .page { padding: 0 24px; }
+  }
+
+  /* ── NAV ───────────────────────────────── */
+  .nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(249,250,251,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: var(--border-default);
+    height: 56px;
+  }
+  .nav .page {
+    display: flex; align-items: center; justify-content: space-between; height: 100%;
+  }
+  .nav-left { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-wordmark {
+    font-family: var(--font-body); font-size: 20px; font-weight: 600;
+    color: var(--ink-900); letter-spacing: -0.01em; line-height: 1;
+  }
+  .nav-wordmark span { color: var(--ink-500); }
+  .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+  .nav-links a {
+    font-size: 13px; color: var(--neutral-500); text-decoration: none;
+    font-weight: 500; letter-spacing: 0.01em; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink-700); }
+  .nav-cta {
+    display: inline-flex; align-items: center;
+    background: var(--ink-700); color: var(--white);
+    font-family: var(--font-body); font-size: 13px; font-weight: 600;
+    padding: 8px 18px; border-radius: 10px; text-decoration: none;
+    letter-spacing: -0.01em; transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--ink-800); }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+  }
+
+  /* ── HERO ──────────────────────────────── */
+  .hero {
+    padding: 152px 0 112px;
+    position: relative;
+    border-bottom: var(--border-default);
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 100%;
+    background:
+      radial-gradient(ellipse 70% 55% at 65% 25%, rgba(49,120,198,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 45% at 25% 75%, rgba(32,96,168,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero .page { position: relative; z-index: 1; }
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  }
+
+  .hero-kicker {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-500);
+    margin-bottom: 24px; display: flex; align-items: center; gap: 8px;
+  }
+  .hero-kicker::before {
+    content: ''; width: 24px; height: 1.5px;
+    background: var(--ink-400); display: inline-block;
+  }
+
+  .hero h1 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: clamp(32px, 3.6vw, 46px);
+    line-height: 1.15; letter-spacing: -0.02em;
+    color: var(--ink-900); margin-bottom: 24px;
+  }
+  .hero h1 em {
+    font-style: italic; color: var(--ink-500);
+  }
+
+  .hero-sub {
+    font-size: 17px; font-weight: 400;
+    color: var(--neutral-700); line-height: 1.75;
+    max-width: 420px; margin-bottom: 36px;
+  }
+
+  .hero-actions { display: flex; align-items: center; gap: 14px; margin-bottom: 48px; }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--ink-700); color: var(--white);
+    font-family: var(--font-body); font-size: 14px; font-weight: 600;
+    padding: 12px 24px; border-radius: 10px; border: none;
+    cursor: pointer; text-decoration: none; letter-spacing: -0.01em;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--ink-800); transform: translateY(-1px); }
+  .btn-secondary {
+    display: inline-flex; align-items: center;
+    background: transparent; color: var(--ink-700);
+    font-family: var(--font-body); font-size: 14px; font-weight: 500;
+    padding: 12px 20px; border-radius: 10px;
+    border: 1.5px solid var(--ink-300);
+    cursor: pointer; text-decoration: none; transition: border-color 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--ink-400); }
+
+  .hero-proof { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .hero-proof-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--neutral-700); font-weight: 400; line-height: 1.5;
+  }
+  .proof-check {
+    flex-shrink: 0; width: 18px; height: 18px; margin-top: 1px;
+    border-radius: 50%; background: var(--accent-teal-light);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .proof-check svg { width: 10px; height: 10px; }
+
+  /* Hero mockup */
+  .hero-visual { position: relative; }
+  .hero-mockup {
+    width: 100%; background: var(--white);
+    border: var(--border-default); border-radius: var(--radius-card);
+    overflow: hidden;
+    box-shadow: 0 20px 72px rgba(13,31,53,0.09), 0 2px 12px rgba(13,31,53,0.04);
+  }
+  .mock-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 10px 18px; border-bottom: var(--border-default);
+  }
+  .mock-bar-left { display: flex; align-items: center; gap: 8px; }
+  .mock-bar-left .wm {
+    font-family: var(--font-body); font-size: 13px; font-weight: 600;
+    color: var(--ink-900); letter-spacing: -0.01em;
+  }
+  .mock-bar-left .wm span { color: var(--ink-500); }
+  .mock-bar-nav { display: flex; gap: 4px; }
+  .mock-bar-nav div {
+    font-size: 11px; padding: 3px 9px; border-radius: 5px; color: var(--neutral-500);
+  }
+  .mock-bar-nav div.active { background: var(--ink-100); color: var(--ink-700); font-weight: 500; }
+
+  .mock-body {
+    display: grid; grid-template-columns: 1fr 1fr; min-height: 380px;
+  }
+
+  /* Voice session panel */
+  .mock-voice {
+    padding: 24px 20px;
+    border-right: var(--border-default);
+    background: var(--ink-900);
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 20px;
+    position: relative;
+  }
+  .voice-status {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--ink-400);
+  }
+  .voice-live {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 9.5px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #4ADE80; background: rgba(74,222,128,0.1);
+    padding: 4px 12px; border-radius: var(--radius-pill);
+  }
+  .voice-live-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #4ADE80;
+    animation: livePulse 1.6s ease infinite;
+  }
+  @keyframes livePulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .voice-candidate-name {
+    font-family: var(--font-body); font-size: 16px; font-weight: 500;
+    color: var(--white); text-align: center; letter-spacing: -0.01em;
+  }
+  .voice-candidate-role {
+    font-size: 11px; color: var(--ink-400); margin-top: -12px;
+  }
+
+  /* Waveform visualizer */
+  .voice-waveform {
+    display: flex; align-items: center; justify-content: center; gap: 3px;
+    height: 56px; width: 100%;
+  }
+  .vw-bar {
+    width: 3px; border-radius: var(--radius-pill);
+    background: var(--ink-500);
+    animation: vwave 1.2s ease-in-out infinite;
+  }
+  @keyframes vwave {
+    0%, 100% { transform: scaleY(0.25); }
+    50% { transform: scaleY(1); }
+  }
+
+  .voice-question-label {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-400);
+    align-self: flex-start;
+  }
+  .voice-question {
+    font-size: 12px; color: rgba(255,255,255,0.7); line-height: 1.6;
+    align-self: flex-start;
+    font-style: italic;
+  }
+
+  .voice-timer {
+    display: flex; align-items: center; gap: 20px;
+    width: 100%;
+  }
+  .voice-timer-time {
+    font-family: 'Courier New', monospace; font-size: 12px;
+    color: var(--ink-300); letter-spacing: 0.05em;
+  }
+  .voice-timer-track {
+    flex: 1; height: 3px; background: rgba(255,255,255,0.08);
+    border-radius: 2px; overflow: hidden;
+  }
+  .voice-timer-fill {
+    height: 100%; width: 62%; background: var(--ink-500);
+    border-radius: 2px;
+  }
+  .voice-timer-label {
+    font-size: 10px; color: var(--ink-400); white-space: nowrap;
+  }
+
+  /* Live transcript snippet */
+  .voice-transcript {
+    width: 100%; border-top: 1px solid rgba(255,255,255,0.06);
+    padding-top: 14px;
+  }
+  .vt-label {
+    font-size: 8.5px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-400); margin-bottom: 8px;
+  }
+  .vt-line {
+    font-size: 11px; color: rgba(255,255,255,0.5); line-height: 1.6;
+  }
+  .vt-line strong {
+    color: rgba(255,255,255,0.75); font-weight: 500;
+  }
+
+  /* Evidence panel */
+  .mock-eval { padding: 20px; background: var(--white); }
+  .eval-title {
+    font-size: 9px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--neutral-500); margin-bottom: 14px;
+  }
+  .eval-candidate {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 18px;
+    padding-bottom: 14px; border-bottom: var(--border-default);
+  }
+  .eval-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--ink-600); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 600; color: var(--white);
+  }
+  .eval-cand-name { font-size: 13px; font-weight: 600; color: var(--ink-900); }
+  .eval-cand-role { font-size: 10.5px; color: var(--neutral-500); }
+
+  .eval-item { margin-bottom: 12px; }
+  .eval-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+  .eval-name { font-size: 11px; font-weight: 500; color: var(--neutral-700); }
+  .eval-score { font-size: 10px; font-weight: 600; color: var(--ink-600); }
+  .eval-track { height: 4px; background: var(--ink-100); border-radius: var(--radius-pill); overflow: hidden; }
+  .eval-fill {
+    height: 100%; background: var(--ink-500); border-radius: var(--radius-pill);
+    transition: width 1.4s cubic-bezier(0.16,1,0.3,1);
+  }
+  .eval-verdict {
+    background: var(--ink-900); border-radius: 10px;
+    padding: 12px 14px; margin-top: 16px;
+  }
+  .eval-verdict-label {
+    font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-400); margin-bottom: 4px;
+  }
+  .eval-verdict-text { font-size: 12px; font-weight: 600; color: var(--white); }
+  .eval-verdict-sub { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+  .evidence-tag {
+    display: inline-flex; align-items: center; gap: 5px;
+    margin-top: 10px; padding: 3px 9px; border-radius: var(--radius-pill);
+    background: var(--accent-teal-light); color: var(--accent-teal);
+    font-size: 10px; font-weight: 600;
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+    .hero-visual { max-width: 560px; }
+    .hero-proof { grid-template-columns: 1fr; }
+  }
+
+  /* ── SECTION SHARED ─────────────────────── */
+  section { padding: 96px 0; }
+  section + section { border-top: var(--border-default); }
+
+  .section-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--ink-500);
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-label::before {
+    content: ''; width: 24px; height: 1.5px;
+    background: var(--ink-400); display: inline-block;
+  }
+  .section-title {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height: 1.15; letter-spacing: -0.015em;
+    color: var(--ink-900); margin-bottom: 12px;
+  }
+  .section-sub {
+    color: var(--neutral-700); line-height: 1.75;
+    max-width: 540px; font-size: 15px;
+  }
+
+  /* centered variant */
+  .centered { text-align: center; }
+  .centered .section-label { justify-content: center; }
+  .centered .section-label::before { display: none; }
+  .centered .section-label::after {
+    content: ''; width: 24px; height: 1.5px;
+    background: var(--ink-400); display: inline-block;
+  }
+  .centered .section-sub { margin: 0 auto; }
+
+  /* ── PROBLEM ────────────────────────────── */
+  .problem { background: var(--white); }
+  .problem-header { margin-bottom: 56px; }
+
+  .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+  .problem-card {
+    border-radius: var(--radius-card); padding: 40px 36px;
+    border: var(--border-default);
+  }
+  .problem-card.old { background: var(--neutral-50); }
+  .problem-card.new { background: var(--ink-100); border-color: var(--ink-200); }
+
+  .pc-label {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .problem-card.old .pc-label { color: var(--neutral-500); }
+  .problem-card.new .pc-label { color: var(--ink-600); }
+
+  .problem-card h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 22px; color: var(--ink-900);
+    margin-bottom: 20px; line-height: 1.25;
+  }
+
+  .plist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .plist li {
+    font-size: 14px; color: var(--neutral-700); line-height: 1.55;
+    padding-left: 22px; position: relative;
+  }
+  .problem-card.old .plist li::before {
+    content: '✕'; position: absolute; left: 0; top: 0;
+    color: #B91C1C; font-size: 12px; font-weight: 700;
+  }
+  .problem-card.new .plist li::before {
+    content: '✓'; position: absolute; left: 0; top: 0;
+    color: var(--ink-600); font-size: 12px; font-weight: 700;
+  }
+
+  .problem-quote {
+    margin-top: 56px; text-align: center;
+    font-family: var(--font-display); font-style: italic;
+    font-size: clamp(18px, 2.2vw, 26px);
+    color: var(--ink-900); line-height: 1.35;
+    max-width: 620px; margin-left: auto; margin-right: auto;
+  }
+  .problem-quote em { font-style: italic; color: var(--ink-500); }
+
+  @media (max-width: 768px) {
+    .problem-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── HOW IT WORKS ───────────────────────── */
+  .how-header { margin-bottom: 64px; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .step-card {
+    background: var(--white); border: var(--border-default);
+    border-radius: var(--radius-card); padding: 36px 28px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(13,31,53,0.07);
+  }
+  .step-num {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--ink-400); margin-bottom: 20px;
+  }
+  .step-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--ink-100); display: flex;
+    align-items: center; justify-content: center;
+    margin-bottom: 20px;
+  }
+  .step-card h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 20px; color: var(--ink-900);
+    margin-bottom: 12px; line-height: 1.25;
+  }
+  .step-card p {
+    font-size: 14px; color: var(--neutral-700); line-height: 1.75;
+  }
+
+  @media (max-width: 768px) {
+    .steps { grid-template-columns: 1fr; }
+  }
+
+  /* ── TRUST ──────────────────────────────── */
+  .trust { background: var(--ink-900); border-top: none !important; position: relative; overflow: hidden; }
+  .trust + section { border-top: none !important; }
+
+  /* Concentric ring decoration */
+  .trust::before {
+    content: '';
+    position: absolute; top: -180px; right: -180px;
+    width: 520px; height: 520px;
+    border-radius: 50%;
+    border: 1px solid rgba(147,191,234,0.06);
+    pointer-events: none;
+  }
+  .trust::after {
+    content: '';
+    position: absolute; bottom: -220px; left: -80px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    border: 1px solid rgba(147,191,234,0.04);
+    pointer-events: none;
+  }
+  .trust .page { position: relative; z-index: 1; }
+
+  .trust .section-label { color: var(--ink-400); }
+  .trust .section-label::before { background: var(--ink-400); }
+  .trust .section-title { color: var(--white); }
+  .trust .section-sub { color: var(--ink-300); }
+
+  .trust-header { margin-bottom: 56px; }
+
+  .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .trust-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: var(--radius-card); padding: 28px 22px;
+    transition: background 0.3s;
+  }
+  .trust-card:hover { background: rgba(255,255,255,0.07); }
+  .trust-card-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    background: rgba(32,96,168,0.25);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .trust-card h4 {
+    font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 8px;
+  }
+  .trust-card p {
+    font-size: 12px; color: var(--ink-300); line-height: 1.7;
+  }
+
+  @media (max-width: 960px) { .trust-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .trust-grid { grid-template-columns: 1fr; } }
+
+  /* ── PILLARS ────────────────────────────── */
+  .pillars-header { margin-bottom: 64px; }
+
+  .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .pillar-card {
+    background: var(--white); border: var(--border-default);
+    border-radius: var(--radius-card); padding: 36px 32px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .pillar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 32px rgba(13,31,53,0.06);
+  }
+  .pillar-card h3 {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: 22px; color: var(--ink-900);
+    margin-bottom: 12px; line-height: 1.25;
+  }
+  .pillar-card p {
+    font-size: 14px; color: var(--neutral-700); line-height: 1.75;
+    margin-bottom: 20px;
+  }
+  .pillar-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pillar-tag {
+    font-size: 11px; font-weight: 500;
+    padding: 4px 10px; border-radius: var(--radius-pill);
+    background: var(--ink-100); color: var(--ink-600);
+  }
+
+  @media (max-width: 768px) { .pillars-grid { grid-template-columns: 1fr; } }
+
+  /* ── OUTCOMES ───────────────────────────── */
+  .outcomes { background: var(--white); }
+  .outcomes-header { margin-bottom: 56px; }
+
+  .outcomes-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .outcome-card {
+    border: var(--border-default); border-radius: 14px;
+    padding: 28px 22px; background: var(--neutral-50);
+  }
+  .outcome-icon {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--ink-100);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .outcome-card h4 {
+    font-size: 14px; font-weight: 600; color: var(--ink-900);
+    margin-bottom: 8px; line-height: 1.35;
+  }
+  .outcome-card p {
+    font-size: 13px; color: var(--neutral-700); line-height: 1.7;
+  }
+
+  @media (max-width: 960px) { .outcomes-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .outcomes-grid { grid-template-columns: 1fr; } }
+
+  /* ── CTA ────────────────────────────────── */
+  .cta-section { padding: 96px 0; }
+  .cta-block {
+    background: var(--ink-900); border-radius: 20px;
+    padding: 72px 56px; text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .cta-block::before {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 440px; height: 440px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(147,191,234,0.06);
+    pointer-events: none;
+  }
+  .cta-block::after {
+    content: '';
+    position: absolute; top: 50%; left: 50%;
+    width: 260px; height: 260px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(147,191,234,0.04);
+    pointer-events: none;
+  }
+  .cta-block .section-title {
+    color: var(--white); position: relative; z-index: 1;
+    margin-bottom: 16px;
+  }
+  .cta-block .section-title em { font-style: italic; color: var(--ink-300); }
+  .cta-sub {
+    font-size: 15px; color: var(--ink-300); line-height: 1.7;
+    max-width: 480px; margin: 0 auto 32px;
+    position: relative; z-index: 1;
+  }
+  .cta-actions {
+    display: flex; align-items: center; justify-content: center; gap: 14px;
+    position: relative; z-index: 1;
+  }
+  .btn-primary-light {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); color: var(--ink-900);
+    font-family: var(--font-body); font-size: 14px; font-weight: 600;
+    padding: 12px 24px; border-radius: 10px; border: none;
+    cursor: pointer; text-decoration: none; transition: transform 0.15s;
+  }
+  .btn-primary-light:hover { transform: translateY(-1px); }
+  .btn-ghost {
+    display: inline-flex; align-items: center;
+    background: transparent; color: var(--ink-300);
+    font-family: var(--font-body); font-size: 14px; font-weight: 500;
+    padding: 12px 20px; border-radius: 10px;
+    border: 1.5px solid rgba(147,191,234,0.15);
+    cursor: pointer; text-decoration: none;
+    transition: border-color 0.2s;
+  }
+  .btn-ghost:hover { border-color: rgba(147,191,234,0.35); }
+
+  @media (max-width: 768px) {
+    .cta-block { padding: 48px 28px; }
+    .cta-actions { flex-direction: column; }
+  }
+
+  /* ── FOOTER ─────────────────────────────── */
+  .footer {
+    border-top: var(--border-default); padding: 32px 0;
+  }
+  .footer .page {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-left { display: flex; align-items: center; gap: 10px; }
+  .footer-copy { font-size: 12px; color: var(--neutral-300); }
+  .footer-tagline {
+    font-family: var(--font-display); font-style: italic;
+    font-size: 14px; color: var(--neutral-500);
+  }
+
+  @media (max-width: 768px) {
+    .footer .page { flex-direction: column; gap: 12px; text-align: center; }
+  }
+
+  /* ── ANIMATIONS ─────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .anim { opacity: 0; animation: fadeUp 0.7s ease-out forwards; }
+  .anim-d1 { animation-delay: 0.08s; }
+  .anim-d2 { animation-delay: 0.18s; }
+  .anim-d3 { animation-delay: 0.32s; }
+  .anim-d4 { animation-delay: 0.46s; }
+  .anim-d5 { animation-delay: 0.6s; }
+
+  /* ── MOBILE HERO MOCKUP ─────────────────── */
+  .hero-mockup-mobile { display: none; }
+
+  @media (max-width: 960px) {
+    .hero-visual { max-width: 560px; }
+    .hero-proof { grid-template-columns: 1fr; }
+
+    /* hide desktop mockup, show mobile one */
+    .hero-mockup { display: none; }
+    .hero-mockup-mobile {
+      display: block;
+      background: var(--white);
+      border: var(--border-default);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      box-shadow: 0 20px 72px rgba(13,31,53,0.09), 0 2px 12px rgba(13,31,53,0.04);
+    }
+
+    /* mobile mock top bar */
+    .mmob-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px; border-bottom: var(--border-default);
+      background: var(--white);
+    }
+    .mmob-bar-left { display: flex; align-items: center; gap: 8px; }
+    .mmob-bar-left .wm { font-family: var(--font-body); font-size: 13px; font-weight: 600; color: var(--ink-900); letter-spacing: -0.01em; }
+    .mmob-bar-left .wm span { color: var(--ink-500); }
+
+    /* live badge */
+    .mmob-live {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+      color: #4ADE80; background: rgba(74,222,128,0.1);
+      padding: 4px 10px; border-radius: var(--radius-pill);
+    }
+    .mmob-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #4ADE80; animation: livePulse 1.6s ease infinite; }
+
+    /* candidate row */
+    .mmob-candidate {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px 16px 12px;
+      border-bottom: var(--border-default);
+      background: var(--ink-900);
+    }
+    .mmob-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--ink-600); display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: var(--white); flex-shrink: 0;
+    }
+    .mmob-cand-name { font-size: 14px; font-weight: 600; color: var(--white); }
+    .mmob-cand-role { font-size: 11px; color: var(--ink-400); margin-top: 2px; }
+
+    /* waveform strip */
+    .mmob-wave {
+      display: flex; align-items: center; gap: 2.5px;
+      padding: 12px 16px; background: var(--ink-900);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .mmob-wave .vw-bar { background: var(--ink-400); }
+
+    /* scores section */
+    .mmob-scores { padding: 16px 16px 4px; background: var(--white); }
+    .mmob-scores-label {
+      font-size: 9px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--neutral-500); margin-bottom: 12px;
+    }
+    .mmob-score-item { margin-bottom: 12px; }
+    .mmob-score-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+    .mmob-score-name { font-size: 12px; font-weight: 500; color: var(--neutral-700); }
+    .mmob-score-val { font-size: 11px; font-weight: 700; color: var(--ink-600); }
+    .mmob-track { height: 5px; background: var(--ink-100); border-radius: var(--radius-pill); overflow: hidden; }
+    .mmob-fill { height: 100%; background: var(--ink-500); border-radius: var(--radius-pill); transition: width 1.4s cubic-bezier(0.16,1,0.3,1); }
+
+    /* verdict */
+    .mmob-verdict {
+      margin: 4px 16px 16px;
+      background: var(--ink-900); border-radius: 10px; padding: 14px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .mmob-verdict-left {}
+    .mmob-verdict-tag { font-size: 8px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-400); margin-bottom: 3px; }
+    .mmob-verdict-text { font-size: 13px; font-weight: 700; color: var(--white); }
+    .mmob-verdict-badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--accent-teal-light); color: var(--accent-teal);
+      font-size: 10px; font-weight: 600;
+      padding: 5px 10px; border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="page">
+    <a href="#" class="nav-left">
+      <!-- Arc-based logo mark -->
+      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5"
+          stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2"
+          stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+      </svg>
+      <span class="nav-wordmark">Lumo<span>360</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#problem">Why Lumo360</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#trust">Trust</a></li>
+      <li><a href="#pillars">Platform</a></li>
+      <li><a href="#outcomes">Outcomes</a></li>
+    </ul>
+    <a href="#cta" class="nav-cta">Book a demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="page">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-kicker anim anim-d1">Screening Intelligence</div>
+        <h1 class="anim anim-d2">Interviews that feel <em>human.</em><br>Decisions that are clear.</h1>
+        <p class="hero-sub anim anim-d3">A conversational AI interviewer that adapts naturally to each candidate and makes every evaluation fully transparent to your team.</p>
+        <div class="hero-actions anim anim-d4">
+          <a href="#cta" class="btn-primary">Book a demo <span>→</span></a>
+          <a href="#how" class="btn-secondary">See how it works</a>
+        </div>
+        <div class="hero-proof anim anim-d5">
+          <div class="hero-proof-item">
+            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Real adaptive conversations
+          </div>
+          <div class="hero-proof-item">
+            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Fully transparent evaluation
+          </div>
+          <div class="hero-proof-item">
+            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Consistent, defensible decisions
+          </div>
+          <div class="hero-proof-item">
+            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            Built for candidates &amp; teams
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup: Voice Session + Evidence -->
+      <div class="hero-visual anim anim-d3">
+        <div class="hero-mockup">
+          <div class="mock-bar">
+            <div class="mock-bar-left">
+              <svg width="16" height="16" viewBox="0 0 44 44" fill="none">
+                <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+              </svg>
+              <span class="wm">Lumo<span>360</span></span>
+            </div>
+            <div class="mock-bar-nav">
+              <div class="active">Candidates</div>
+              <div>Roles</div>
+              <div>Reports</div>
+            </div>
+          </div>
+          <div class="mock-body">
+            <!-- Voice session -->
+            <div class="mock-voice">
+              <div class="voice-live"><div class="voice-live-dot"></div>Live Interview</div>
+
+              <div class="voice-candidate-name">Sarah Chen</div>
+              <div class="voice-candidate-role">Senior Product Manager</div>
+
+              <!-- Waveform -->
+              <div class="voice-waveform">
+                <div class="vw-bar" style="height:8px; animation-delay:0s;"></div>
+                <div class="vw-bar" style="height:18px; animation-delay:0.08s;"></div>
+                <div class="vw-bar" style="height:32px; animation-delay:0.16s;"></div>
+                <div class="vw-bar" style="height:24px; animation-delay:0.24s;"></div>
+                <div class="vw-bar" style="height:40px; animation-delay:0.32s;"></div>
+                <div class="vw-bar" style="height:28px; animation-delay:0.4s;"></div>
+                <div class="vw-bar" style="height:16px; animation-delay:0.48s;"></div>
+                <div class="vw-bar" style="height:36px; animation-delay:0.56s;"></div>
+                <div class="vw-bar" style="height:20px; animation-delay:0.64s;"></div>
+                <div class="vw-bar" style="height:44px; animation-delay:0.72s;"></div>
+                <div class="vw-bar" style="height:14px; animation-delay:0.8s;"></div>
+                <div class="vw-bar" style="height:30px; animation-delay:0.88s;"></div>
+                <div class="vw-bar" style="height:22px; animation-delay:0.96s;"></div>
+                <div class="vw-bar" style="height:38px; animation-delay:1.04s;"></div>
+                <div class="vw-bar" style="height:12px; animation-delay:1.12s;"></div>
+              </div>
+
+              <div class="voice-question-label">Current question · Strategic Thinking</div>
+              <div class="voice-question">"Tell me about a time you had to make a significant product decision with incomplete data."</div>
+
+              <!-- Timer / progress -->
+              <div class="voice-timer">
+                <span class="voice-timer-time">14:32</span>
+                <div class="voice-timer-track"><div class="voice-timer-fill"></div></div>
+                <span class="voice-timer-label">Q5 / 8</span>
+              </div>
+
+              <!-- Live transcript snippet -->
+              <div class="voice-transcript">
+                <div class="vt-label">Live Transcript</div>
+                <div class="vt-line"><strong>Sarah:</strong> "...I mapped the signals by confidence level and aligned the team on a clear decision framework before the deadline."</div>
+              </div>
+            </div>
+
+            <!-- Evidence panel -->
+            <div class="mock-eval">
+              <div class="eval-title">Evidence Panel</div>
+
+              <div class="eval-candidate">
+                <div class="eval-avatar">SC</div>
+                <div>
+                  <div class="eval-cand-name">Sarah Chen</div>
+                  <div class="eval-cand-role">Senior Product Manager · 8 yrs</div>
+                </div>
+              </div>
+
+              <div class="eval-item">
+                <div class="eval-row">
+                  <span class="eval-name">Structured thinking</span>
+                  <span class="eval-score">91%</span>
+                </div>
+                <div class="eval-track"><div class="eval-fill" style="width:0%" data-w="91%"></div></div>
+              </div>
+              <div class="eval-item">
+                <div class="eval-row">
+                  <span class="eval-name">Stakeholder influence</span>
+                  <span class="eval-score">78%</span>
+                </div>
+                <div class="eval-track"><div class="eval-fill" style="width:0%" data-w="78%"></div></div>
+              </div>
+              <div class="eval-item">
+                <div class="eval-row">
+                  <span class="eval-name">Prioritisation under ambiguity</span>
+                  <span class="eval-score">85%</span>
+                </div>
+                <div class="eval-track"><div class="eval-fill" style="width:0%" data-w="85%"></div></div>
+              </div>
+              <div class="eval-item">
+                <div class="eval-row">
+                  <span class="eval-name">Communication clarity</span>
+                  <span class="eval-score">76%</span>
+                </div>
+                <div class="eval-track"><div class="eval-fill" style="width:0%" data-w="76%"></div></div>
+              </div>
+              <div class="eval-verdict">
+                <div class="eval-verdict-label">AI Recommendation</div>
+                <div class="eval-verdict-text">Advance to final stage</div>
+                <div class="eval-verdict-sub">Strong evidence across all competency areas.</div>
+              </div>
+              <div class="evidence-tag">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Linked to 3 transcript moments
+              </div>
+            </div>
+          </div>
+        </div><!-- end hero-mockup (desktop) -->
+
+        <!-- Mobile mockup: simplified card view -->
+        <div class="hero-mockup-mobile">
+          <!-- Top bar -->
+          <div class="mmob-bar">
+            <div class="mmob-bar-left">
+              <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
+                <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+                <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+              </svg>
+              <span class="wm">Lumo<span>360</span></span>
+            </div>
+            <div class="mmob-live"><div class="mmob-live-dot"></div>Live Interview</div>
+          </div>
+
+          <!-- Candidate + waveform on dark bg -->
+          <div class="mmob-candidate">
+            <div class="mmob-avatar">SC</div>
+            <div>
+              <div class="mmob-cand-name">Sarah Chen</div>
+              <div class="mmob-cand-role">Senior Product Manager · Q5 of 8</div>
+            </div>
+          </div>
+          <div class="mmob-wave">
+            <div class="vw-bar" style="height:8px;animation-delay:0s;"></div>
+            <div class="vw-bar" style="height:20px;animation-delay:0.08s;"></div>
+            <div class="vw-bar" style="height:34px;animation-delay:0.16s;"></div>
+            <div class="vw-bar" style="height:24px;animation-delay:0.24s;"></div>
+            <div class="vw-bar" style="height:42px;animation-delay:0.32s;"></div>
+            <div class="vw-bar" style="height:28px;animation-delay:0.4s;"></div>
+            <div class="vw-bar" style="height:16px;animation-delay:0.48s;"></div>
+            <div class="vw-bar" style="height:38px;animation-delay:0.56s;"></div>
+            <div class="vw-bar" style="height:22px;animation-delay:0.64s;"></div>
+            <div class="vw-bar" style="height:44px;animation-delay:0.72s;"></div>
+            <div class="vw-bar" style="height:14px;animation-delay:0.80s;"></div>
+            <div class="vw-bar" style="height:30px;animation-delay:0.88s;"></div>
+            <div class="vw-bar" style="height:18px;animation-delay:0.96s;"></div>
+            <div class="vw-bar" style="height:36px;animation-delay:1.04s;"></div>
+            <div class="vw-bar" style="height:10px;animation-delay:1.12s;"></div>
+            <div class="vw-bar" style="height:26px;animation-delay:1.20s;"></div>
+            <div class="vw-bar" style="height:40px;animation-delay:1.28s;"></div>
+            <div class="vw-bar" style="height:20px;animation-delay:1.36s;"></div>
+          </div>
+
+          <!-- Score bars -->
+          <div class="mmob-scores">
+            <div class="mmob-scores-label">Live Evaluation</div>
+            <div class="mmob-score-item">
+              <div class="mmob-score-row">
+                <span class="mmob-score-name">Structured thinking</span>
+                <span class="mmob-score-val">91%</span>
+              </div>
+              <div class="mmob-track"><div class="mmob-fill" style="width:0%" data-w="91%"></div></div>
+            </div>
+            <div class="mmob-score-item">
+              <div class="mmob-score-row">
+                <span class="mmob-score-name">Stakeholder influence</span>
+                <span class="mmob-score-val">78%</span>
+              </div>
+              <div class="mmob-track"><div class="mmob-fill" style="width:0%" data-w="78%"></div></div>
+            </div>
+            <div class="mmob-score-item">
+              <div class="mmob-score-row">
+                <span class="mmob-score-name">Communication clarity</span>
+                <span class="mmob-score-val">85%</span>
+              </div>
+              <div class="mmob-track"><div class="mmob-fill" style="width:0%" data-w="85%"></div></div>
+            </div>
+          </div>
+
+          <!-- Verdict -->
+          <div class="mmob-verdict">
+            <div class="mmob-verdict-left">
+              <div class="mmob-verdict-tag">AI Recommendation</div>
+              <div class="mmob-verdict-text">Advance to final stage</div>
+            </div>
+            <div class="mmob-verdict-badge">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Transparent
+            </div>
+          </div>
+        </div><!-- end hero-mockup-mobile -->
+      </div><!-- end hero-visual -->
+    </div><!-- end hero-grid -->
+  </div><!-- end page -->
+</header>
+
+<!-- PROBLEM -->
+<section class="problem" id="problem">
+  <div class="page">
+    <div class="problem-header centered reveal">
+      <div class="section-label">The Problem</div>
+      <h2 class="section-title">Hiring is stuck between two extremes</h2>
+      <p class="section-sub">Human interviews don't scale. AI tools scale but lack transparency. Most teams are forced to choose one or the other.</p>
+    </div>
+
+    <div class="problem-grid">
+      <div class="problem-card old reveal">
+        <div class="pc-label">The Old Way</div>
+        <h3>Manual screening that breaks under volume — or opaque AI that scores without explanation.</h3>
+        <ul class="plist">
+          <li>Human interviews that don't scale</li>
+          <li>AI tools that hide their decision logic</li>
+          <li>Inconsistent assessments across teams</li>
+          <li>Black-box recommendations you can't defend</li>
+        </ul>
+      </div>
+      <div class="problem-card new reveal">
+        <div class="pc-label">The Lumo360 Way</div>
+        <h3>Natural conversations at scale — with every decision fully traceable.</h3>
+        <ul class="plist">
+          <li>Conversations that adapt to every candidate</li>
+          <li>Evaluation logic that's always visible</li>
+          <li>Consistent, defensible decisions</li>
+          <li>Full interview trace your team can review</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="problem-quote reveal">"We don't replace the interviewer with a black box — we make interviewing <em>scalable, human, and fully understandable.</em>"</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="page">
+    <div class="how-header centered reveal">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three steps from job description to clarity</h2>
+    </div>
+
+    <div class="steps">
+      <div class="step-card reveal">
+        <div class="step-num">Step 01</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="2" width="14" height="16" rx="2" stroke="#2060A8" stroke-width="1.5"/>
+            <line x1="6" y1="6" x2="14" y2="6" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="9.5" x2="14" y2="9.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="13" x2="11" y2="13" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>It starts with the role</h3>
+        <p>Upload your job description and Lumo360 identifies the key competencies required for success, turning them into a structured interview framework.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num">Step 02</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M3 14.5V16a1 1 0 001 1h2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 14.5V16a1 1 0 01-1 1h-2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M3 5.5V4a1 1 0 011-1h2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M17 5.5V4a1 1 0 00-1-1h-2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="10" cy="10" r="4" stroke="#2060A8" stroke-width="1.5"/>
+            <circle cx="10" cy="10" r="1.5" fill="#2060A8"/>
+          </svg>
+        </div>
+        <h3>It runs a real interview</h3>
+        <p>Candidates join a conversation that adapts in real time. The AI follows the framework, asking relevant questions and probing deeper based on each answer.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-num">Step 03</div>
+        <div class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="3" width="16" height="14" rx="2" stroke="#2060A8" stroke-width="1.5"/>
+            <line x1="2" y1="7.5" x2="18" y2="7.5" stroke="#93BFEA" stroke-width="1.5"/>
+            <line x1="6" y1="11" x2="10" y2="11" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="14" x2="14" y2="14" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Clear, evidence-based evaluations</h3>
+        <p>After each interview, see how the candidate performed across every competency. Each score is backed by evidence from the conversation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="trust" id="trust">
+  <div class="page">
+    <div class="trust-header centered reveal">
+      <div class="section-label">Built for Trust</div>
+      <h2 class="section-title">No hidden scoring. No black-box decisions.</h2>
+      <p class="section-sub">Every part of the evaluation is open, explainable, and reviewable — built for teams who need to stand behind their hiring decisions.</p>
+    </div>
+
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-card-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(147,191,234,0.8)" stroke-width="1.5"/>
+            <line x1="5" y1="5.5" x2="11" y2="5.5" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="5" y1="8" x2="11" y2="8" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+            <line x1="5" y1="10.5" x2="9" y2="10.5" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>Full interview transcript</h4>
+        <p>Every exchange captured and available for review at any time.</p>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-card-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <circle cx="8" cy="8" r="5.5" stroke="rgba(147,191,234,0.8)" stroke-width="1.5"/>
+            <path d="M8 5v3l2.5 1.5" stroke="rgba(147,191,234,0.8)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>Visible question logic</h4>
+        <p>See why each question was asked and how it connects to evaluation criteria.</p>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-card-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <rect x="2" y="4" width="5" height="8" rx="1" stroke="rgba(147,191,234,0.8)" stroke-width="1.3"/>
+            <rect x="9" y="4" width="5" height="8" rx="1" stroke="rgba(147,191,234,0.8)" stroke-width="1.3"/>
+            <line x1="7" y1="8" x2="9" y2="8" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>Structured evaluation criteria</h4>
+        <p>The same framework applied consistently across every candidate.</p>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-card-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 12L8 4l4 8" stroke="rgba(147,191,234,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="5.5" y1="9.5" x2="10.5" y2="9.5" stroke="rgba(147,191,234,0.5)" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>Traceable decision path</h4>
+        <p>Audit-ready for compliance — every recommendation fully explainable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="page">
+    <div class="pillars-header centered reveal">
+      <div class="section-label">What Sets Us Apart</div>
+      <h2 class="section-title">Four principles. One coherent platform.</h2>
+    </div>
+
+    <div class="pillars-grid">
+      <div class="pillar-card reveal">
+        <h3>Human conversation quality</h3>
+        <p>The interview feels like a real conversation, not a form. Our AI adapts naturally to each candidate's answers — exploring experience in context, never from a rigid script.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Dynamic follow-ups</span>
+          <span class="pillar-tag">Context-aware</span>
+          <span class="pillar-tag">No rigid scripts</span>
+        </div>
+      </div>
+      <div class="pillar-card reveal">
+        <h3>Transparent evaluation</h3>
+        <p>Every decision can be understood and explained. Every question, follow-up, and assessment is visible — so your team knows exactly how each candidate was evaluated.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Full transcript</span>
+          <span class="pillar-tag">Visible logic</span>
+          <span class="pillar-tag">Traceable path</span>
+        </div>
+      </div>
+      <div class="pillar-card reveal">
+        <h3>Trust through consistency</h3>
+        <p>Fairness comes from consistency and clarity. Every candidate is evaluated through the same transparent framework — making decisions defensible at any scale.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Standardised logic</span>
+          <span class="pillar-tag">Explainable scoring</span>
+          <span class="pillar-tag">Auditability</span>
+        </div>
+      </div>
+      <div class="pillar-card reveal">
+        <h3>Human-centred design</h3>
+        <p>Technology should respect both sides of the interview. Built to create better candidate experiences while giving hiring teams full confidence in the process.</p>
+        <div class="pillar-tags">
+          <span class="pillar-tag">Candidate-first flow</span>
+          <span class="pillar-tag">Tone adaptation</span>
+          <span class="pillar-tag">Reduced fatigue</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes" id="outcomes">
+  <div class="page">
+    <div class="outcomes-header centered reveal">
+      <div class="section-label">Outcomes</div>
+      <h2 class="section-title">What your team gains</h2>
+    </div>
+
+    <div class="outcomes-grid">
+      <div class="outcome-card reveal">
+        <div class="outcome-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 9L7 13L15 5" stroke="#2060A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>More consistent hiring decisions</h4>
+        <p>Same evaluation framework, every candidate, every time.</p>
+      </div>
+      <div class="outcome-card reveal">
+        <div class="outcome-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="6.5" stroke="#2060A8" stroke-width="1.5"/>
+            <path d="M9 5.5v3.5l2.5 2" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>Faster screening without losing depth</h4>
+        <p>Scale first-round interviews without sacrificing quality of insight.</p>
+      </div>
+      <div class="outcome-card reveal">
+        <div class="outcome-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 13.5L7.5 9l2.5 2.5L15 5" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h4>Clear reasoning behind every recommendation</h4>
+        <p>Never rely on unexplained AI outputs again.</p>
+      </div>
+      <div class="outcome-card reveal">
+        <div class="outcome-icon">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="7" r="3" stroke="#2060A8" stroke-width="1.5"/>
+            <path d="M3.5 15c0-3 2.5-4.5 5.5-4.5s5.5 1.5 5.5 4.5" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h4>Better candidate experience at scale</h4>
+        <p>Candidates feel heard — not processed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="padding: 96px 0; background: var(--white);">
+  <div class="page">
+    <div class="centered reveal" style="margin-bottom: 56px;">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Common questions</h2>
+    </div>
+    <div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 2px;">
+      <details style="border: var(--border-default); border-radius: 12px; padding: 24px 28px; background: var(--neutral-50);">
+        <summary style="font-size: 15px; font-weight: 600; color: var(--ink-900); cursor: pointer; list-style: none;">What is Lumo360?</summary>
+        <p style="margin-top: 14px; font-size: 14px; color: var(--neutral-700); line-height: 1.75;">Lumo360 is an AI interviewing platform that conducts natural, adaptive conversations with candidates and provides hiring teams with fully transparent, evidence-backed evaluation reports — so every decision is defensible.</p>
+      </details>
+      <details style="border: var(--border-default); border-radius: 12px; padding: 24px 28px; background: var(--neutral-50); margin-top: 8px;">
+        <summary style="font-size: 15px; font-weight: 600; color: var(--ink-900); cursor: pointer; list-style: none;">How is Lumo360 different from other AI hiring tools?</summary>
+        <p style="margin-top: 14px; font-size: 14px; color: var(--neutral-700); line-height: 1.75;">Unlike black-box AI screening tools, Lumo360 makes every evaluation decision fully traceable. Your team can see the exact transcript moments that led to each recommendation — no unexplained scores.</p>
+      </details>
+      <details style="border: var(--border-default); border-radius: 12px; padding: 24px 28px; background: var(--neutral-50); margin-top: 8px;">
+        <summary style="font-size: 15px; font-weight: 600; color: var(--ink-900); cursor: pointer; list-style: none;">Does Lumo360 replace human interviewers?</summary>
+        <p style="margin-top: 14px; font-size: 14px; color: var(--neutral-700); line-height: 1.75;">No. Lumo360 handles scalable first-round screening so your team can focus their time on the most promising candidates. Human judgement remains central — we just make it faster and more consistent.</p>
+      </details>
+      <details style="border: var(--border-default); border-radius: 12px; padding: 24px 28px; background: var(--neutral-50); margin-top: 8px;">
+        <summary style="font-size: 15px; font-weight: 600; color: var(--ink-900); cursor: pointer; list-style: none;">How do I get started?</summary>
+        <p style="margin-top: 14px; font-size: 14px; color: var(--neutral-700); line-height: 1.75;">Book a demo directly on this page. The team will walk you through setup and help you configure your first screening workflow — typically live within a day.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="page">
+    <div class="cta-block reveal">
+      <h2 class="section-title">Designed for people.<br>Built for <em>trust.</em></h2>
+      <p class="cta-sub">See how Lumo360 helps your team hire with confidence — without the black box.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn-primary-light">Book a demo <span>→</span></a>
+        <a href="#how" class="btn-ghost">See how it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO MODAL -->
+<div id="demo-modal" style="display:none; position:fixed; inset:0; z-index:200; align-items:center; justify-content:center;">
+  <div id="demo-backdrop" style="position:absolute; inset:0; background:rgba(13,31,53,0.55); backdrop-filter:blur(4px);"></div>
+  <div style="position:relative; z-index:1; background:var(--white); border-radius:20px; padding:48px 44px; max-width:420px; width:90%; box-shadow:0 24px 80px rgba(13,31,53,0.18); text-align:center;">
+    <div style="width:48px;height:48px;border-radius:12px;background:var(--ink-100);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+      <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+      </svg>
+    </div>
+    <h3 style="font-family:var(--font-display);font-size:26px;color:var(--ink-900);margin-bottom:10px;font-weight:400;letter-spacing:-0.015em;">Book a demo</h3>
+    <p style="font-size:14px;color:var(--neutral-500);line-height:1.7;margin-bottom:28px;">Drop your email and we'll be in touch to find a time that works for you.</p>
+
+    <div id="demo-form">
+      <input id="demo-email" type="email" placeholder="your@email.com"
+        style="width:100%;padding:13px 16px;border:1.5px solid var(--neutral-200);border-radius:10px;font-family:var(--font-body);font-size:15px;color:var(--ink-900);outline:none;margin-bottom:12px;transition:border-color 0.2s;"
+        onfocus="this.style.borderColor='var(--ink-400)'"
+        onblur="this.style.borderColor='var(--neutral-200)'"/>
+      <button onclick="submitDemo()"
+        style="width:100%;padding:13px;background:var(--ink-700);color:var(--white);border:none;border-radius:10px;font-family:var(--font-body);font-size:14px;font-weight:600;cursor:pointer;letter-spacing:-0.01em;transition:background 0.2s;"
+        onmouseover="this.style.background='var(--ink-800)'"
+        onmouseout="this.style.background='var(--ink-700)'">
+        Request my demo →
+      </button>
+      <p id="demo-error" style="display:none;color:#B91C1C;font-size:12px;margin-top:10px;">Please enter a valid email address.</p>
+    </div>
+
+    <div id="demo-success" style="display:none;">
+      <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-teal-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="#1A8A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <p style="font-size:15px;font-weight:600;color:var(--ink-900);margin-bottom:6px;">You're on the list!</p>
+      <p style="font-size:13px;color:var(--neutral-500);">We'll be in touch very soon.</p>
+    </div>
+
+    <button onclick="closeDemo()" style="position:absolute;top:16px;right:18px;background:none;border:none;cursor:pointer;color:var(--neutral-300);font-size:20px;line-height:1;">✕</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="page">
+    <div class="footer-left">
+      <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="16" stroke="#B0B8C4" stroke-width="2.5"
+          stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="9" stroke="#B0B8C4" stroke-width="2"
+          stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="2.5" fill="#B0B8C4"/>
+      </svg>
+      <span class="footer-copy">Screening Intelligence · Lumo360</span>
+    </div>
+    <span class="footer-tagline">Designed for people. Built for trust.</span>
+    <span class="footer-copy">© 2026 Lumo360. All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  // Demo modal
+  function openDemo() {
+    const modal = document.getElementById('demo-modal');
+    modal.style.display = 'flex';
+    document.getElementById('demo-success').style.display = 'none';
+    document.getElementById('demo-form').style.display = 'block';
+    document.getElementById('demo-email').value = '';
+    document.getElementById('demo-error').style.display = 'none';
+  }
+  function closeDemo() {
+    document.getElementById('demo-modal').style.display = 'none';
+  }
+  function submitDemo() {
+    const email = document.getElementById('demo-email').value;
+    const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!valid) {
+      document.getElementById('demo-error').style.display = 'block';
+      return;
+    }
+    fetch('https://formspree.io/f/mzdyknoz', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email, _subject: 'Lumo360 demo request' })
+    })
+    .then(res => res.json())
+    .then(() => {
+      document.getElementById('demo-form').style.display = 'none';
+      document.getElementById('demo-success').style.display = 'block';
+    })
+    .catch(() => {
+      document.getElementById('demo-error').textContent = 'Something went wrong. Please try again.';
+      document.getElementById('demo-error').style.display = 'block';
+    });
+  }
+  document.getElementById('demo-backdrop').addEventListener('click', closeDemo);
+  document.querySelectorAll('a[href="#cta"], .nav-cta').forEach(el => {
+    el.addEventListener('click', e => { e.preventDefault(); openDemo(); });
+  });
+
+  // Animate eval bars (desktop + mobile)
+  setTimeout(() => {
+    document.querySelectorAll('.eval-fill, .mmob-fill').forEach(bar => {
+      bar.style.width = bar.dataset.w;
+    });
+  }, 800);
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
