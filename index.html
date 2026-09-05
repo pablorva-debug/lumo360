@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumo360 – AI Interview Software for Transparent, Scalable Hiring</title>
-<meta name="description" content="Lumo360 is an AI interviewing platform that conducts natural candidate conversations and gives your team fully transparent, evidence-backed hiring decisions. Book a demo.">
+<meta name="description" content="AI interview software that runs natural candidate conversations and gives your team transparent, evidence-backed hiring decisions. Book a demo.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://lumo360.io">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M 26 10 A 12 12 0 1 0 26 22' stroke='%230D1F35' stroke-width='2.8' fill='none' stroke-linecap='round'/%3E%3Cpath d='M 22 12.5 A 7 7 0 1 0 22 19.5' stroke='%230D1F35' stroke-width='2.5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%230D1F35'/%3E%3C/svg%3E">
@@ -57,7 +57,7 @@
       "name": "What is Lumo360?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lumo360 is an AI interviewing platform that conducts natural, adaptive conversations with candidates and provides hiring teams with fully transparent, evidence-backed evaluation reports."
+        "text": "Lumo360 is an AI interviewing platform that conducts natural, adaptive conversations with candidates and provides hiring teams with fully transparent, evidence-backed evaluation reports — so every decision is defensible."
       }
     },
     {
@@ -65,7 +65,7 @@
       "name": "How is Lumo360 different from other AI hiring tools?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Unlike black-box AI screening tools, Lumo360 makes every evaluation decision fully traceable. Your team can see the exact transcript moments that led to each recommendation."
+        "text": "Unlike black-box AI screening tools, Lumo360 makes every evaluation decision fully traceable. Your team can see the exact transcript moments that led to each recommendation — no unexplained scores."
       }
     },
     {
@@ -73,15 +73,15 @@
       "name": "Does Lumo360 replace human interviewers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Lumo360 handles scalable first-round screening so your team can focus their time on the most promising candidates. Every AI recommendation is transparent and reviewable."
+        "text": "No. Lumo360 handles scalable first-round screening so your team can focus their time on the most promising candidates. Human judgement remains central — we just make it faster and more consistent."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I get started with Lumo360?",
+      "name": "How do I get started?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can book a demo directly on the Lumo360 website at lumo360.io. The team will walk you through setup and help you configure your first screening workflow."
+        "text": "Book a demo directly on this page. The team will walk you through setup and help you configure your first screening workflow — typically live within a day."
       }
     },
     {
@@ -97,7 +97,7 @@
       "name": "Will candidates dislike using an AI interview system?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most candidates don't experience it as a traditional AI interview or a one-way recording. Instead, it feels like a structured, conversational phone interview that they can complete on their own time. Many candidates actually prefer this format because it removes scheduling friction, provides clear expectations upfront, and allows them to complete the screening quickly without waiting days for a recruiter call."
+        "text": "Most candidates don't experience it as a traditional \"AI interview\" or a one-way recording. Instead, it feels like a structured, conversational phone interview that they can complete on their own time. Many candidates actually prefer this format because it removes scheduling friction, provides clear expectations upfront, and allows them to complete the screening quickly without waiting days for a recruiter call."
       }
     },
     {
@@ -127,7 +127,7 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
 <style>
   :root {
     /* Brand Identity palette */
@@ -152,7 +152,7 @@
     --accent-teal: #1A8A7A;
     --accent-teal-light: #E4F5F2;
 
-    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-display: 'Archivo', system-ui, sans-serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
 
     --radius-card: 16px;
@@ -213,8 +213,36 @@
   }
   .nav-cta:hover { background: var(--ink-800); }
 
+  .nav-toggle {
+    display: none;
+    background: none; border: none; cursor: pointer;
+    width: 36px; height: 36px; padding: 0;
+    align-items: center; justify-content: center;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after {
+    content: ''; display: block; width: 20px; height: 2px;
+    background: var(--ink-900); border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .nav-toggle span { position: relative; }
+  .nav-toggle span::before { position: absolute; top: -6px; }
+  .nav-toggle span::after { position: absolute; top: 6px; }
+  .nav-toggle.open span { background: transparent; }
+  .nav-toggle.open span::before { transform: translateY(6px) rotate(45deg); }
+  .nav-toggle.open span::after { transform: translateY(-6px) rotate(-45deg); }
+
   @media (max-width: 768px) {
-    .nav-links { display: none; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 56px; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--white);
+      border-bottom: var(--border-default);
+      padding: 8px 24px 16px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--neutral-100); font-size: 14px; }
+    .nav-toggle { display: flex; }
   }
 
   /* ── HERO ──────────────────────────────── */
@@ -248,13 +276,13 @@
   }
 
   .hero h1 {
-    font-family: var(--font-display); font-weight: 400;
+    font-family: var(--font-display); font-weight: 600;
     font-size: clamp(32px, 3.6vw, 46px);
-    line-height: 1.15; letter-spacing: -0.02em;
+    line-height: 1.15; letter-spacing: -0.032em;
     color: var(--ink-900); margin-bottom: 24px;
   }
   .hero h1 em {
-    font-style: italic; color: var(--ink-500);
+    font-style: normal; color: var(--ink-500);
   }
 
   .hero-sub {
@@ -490,9 +518,9 @@
     background: var(--ink-400); display: inline-block;
   }
   .section-title {
-    font-family: var(--font-display); font-weight: 400;
+    font-family: var(--font-display); font-weight: 600;
     font-size: clamp(28px, 3vw, 40px);
-    line-height: 1.15; letter-spacing: -0.015em;
+    line-height: 1.15; letter-spacing: -0.03em;
     color: var(--ink-900); margin-bottom: 12px;
   }
   .section-sub {
@@ -531,8 +559,8 @@
   .problem-card.new .pc-label { color: var(--ink-600); }
 
   .problem-card h3 {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: 22px; color: var(--ink-900);
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 22px; color: var(--ink-900); letter-spacing: -0.025em;
     margin-bottom: 20px; line-height: 1.25;
   }
 
@@ -552,12 +580,12 @@
 
   .problem-quote {
     margin-top: 56px; text-align: center;
-    font-family: var(--font-display); font-style: italic;
-    font-size: clamp(18px, 2.2vw, 26px);
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(18px, 2.2vw, 26px); letter-spacing: -0.02em;
     color: var(--ink-900); line-height: 1.35;
     max-width: 620px; margin-left: auto; margin-right: auto;
   }
-  .problem-quote em { font-style: italic; color: var(--ink-500); }
+  .problem-quote em { font-style: normal; font-weight: 600; color: var(--ink-500); }
 
   @media (max-width: 768px) {
     .problem-grid { grid-template-columns: 1fr; }
@@ -587,8 +615,8 @@
     margin-bottom: 20px;
   }
   .step-card h3 {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: 20px; color: var(--ink-900);
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 20px; color: var(--ink-900); letter-spacing: -0.025em;
     margin-bottom: 12px; line-height: 1.25;
   }
   .step-card p {
@@ -667,8 +695,8 @@
     box-shadow: 0 10px 32px rgba(13,31,53,0.06);
   }
   .pillar-card h3 {
-    font-family: var(--font-display); font-weight: 400;
-    font-size: 22px; color: var(--ink-900);
+    font-family: var(--font-display); font-weight: 600;
+    font-size: 22px; color: var(--ink-900); letter-spacing: -0.025em;
     margin-bottom: 12px; line-height: 1.25;
   }
   .pillar-card p {
@@ -739,7 +767,7 @@
     color: var(--white); position: relative; z-index: 1;
     margin-bottom: 16px;
   }
-  .cta-block .section-title em { font-style: italic; color: var(--ink-300); }
+  .cta-block .section-title em { font-style: normal; color: var(--ink-300); }
   .cta-sub {
     font-size: 15px; color: var(--ink-300); line-height: 1.7;
     max-width: 480px; margin: 0 auto 32px;
@@ -783,8 +811,8 @@
   .footer-left { display: flex; align-items: center; gap: 10px; }
   .footer-copy { font-size: 12px; color: var(--neutral-300); }
   .footer-tagline {
-    font-family: var(--font-display); font-style: italic;
-    font-size: 14px; color: var(--neutral-500);
+    font-family: var(--font-display); font-weight: 500;
+    font-size: 13px; letter-spacing: -0.01em; color: var(--neutral-500);
   }
 
   @media (max-width: 768px) {
@@ -900,9 +928,9 @@
 <!-- NAV -->
 <nav class="nav">
   <div class="page">
-    <a href="#" class="nav-left">
+    <a href="/" class="nav-left" aria-label="Lumo360 home">
       <!-- Arc-based logo mark -->
-      <svg width="30" height="30" viewBox="0 0 44 44" fill="none">
+      <svg aria-hidden="true" width="30" height="30" viewBox="0 0 44 44" fill="none">
         <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5"
           stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
         <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2"
@@ -911,14 +939,17 @@
       </svg>
       <span class="nav-wordmark">Lumo<span>360</span></span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#problem">Why Lumo360</a></li>
       <li><a href="#how">How it works</a></li>
       <li><a href="#trust">Trust</a></li>
       <li><a href="#pillars">Platform</a></li>
       <li><a href="#outcomes">Outcomes</a></li>
     </ul>
-    <a href="#cta" class="nav-cta">Book a demo</a>
+    <div style="display:flex; align-items:center; gap:8px;">
+      <a href="#cta" class="nav-cta">Book a demo</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
   </div>
 </nav>
 
@@ -936,19 +967,19 @@
         </div>
         <div class="hero-proof anim anim-d5">
           <div class="hero-proof-item">
-            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="proof-check"><svg aria-hidden="true" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             Real adaptive conversations
           </div>
           <div class="hero-proof-item">
-            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="proof-check"><svg aria-hidden="true" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             Fully transparent evaluation
           </div>
           <div class="hero-proof-item">
-            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="proof-check"><svg aria-hidden="true" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             Consistent, defensible decisions
           </div>
           <div class="hero-proof-item">
-            <div class="proof-check"><svg viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="proof-check"><svg aria-hidden="true" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             Built for candidates &amp; teams
           </div>
         </div>
@@ -959,7 +990,7 @@
         <div class="hero-mockup">
           <div class="mock-bar">
             <div class="mock-bar-left">
-              <svg width="16" height="16" viewBox="0 0 44 44" fill="none">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 44 44" fill="none">
                 <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
                 <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
                 <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
@@ -1062,7 +1093,7 @@
                 <div class="eval-verdict-sub">Strong evidence across all competency areas.</div>
               </div>
               <div class="evidence-tag">
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 Linked to 3 transcript moments
               </div>
             </div>
@@ -1074,7 +1105,7 @@
           <!-- Top bar -->
           <div class="mmob-bar">
             <div class="mmob-bar-left">
-              <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 44 44" fill="none">
                 <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
                 <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
                 <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
@@ -1146,7 +1177,7 @@
               <div class="mmob-verdict-text">Advance to final stage</div>
             </div>
             <div class="mmob-verdict-badge">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <svg aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M1.5 5.5L3.5 7.5L8.5 2.5" stroke="#1A8A7A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Transparent
             </div>
           </div>
@@ -1169,40 +1200,71 @@
     </div>
 
     <!-- headline -->
-    <h2 style="font-family:var(--font-display);font-weight:400;font-size:clamp(26px,3vw,40px);line-height:1.15;letter-spacing:-0.02em;color:var(--white);max-width:620px;margin-bottom:20px;">The CV stopped being a signal.<br><em style="color:var(--ink-400);">The conversation is what's left.</em></h2>
+    <h2 style="font-family:var(--font-display);font-weight:600;font-size:clamp(26px,3vw,40px);line-height:1.15;letter-spacing:-0.032em;color:var(--white);max-width:620px;margin-bottom:20px;">The CV stopped being a signal.<br><em style="font-style:normal;color:var(--ink-400);">The conversation is what's left.</em></h2>
     <p style="font-size:16px;color:rgba(255,255,255,0.55);line-height:1.75;max-width:560px;margin-bottom:56px;">AI tools have made every application look polished and professional. Recruiters are drowning in volume with less signal than ever. The only way to separate substance from surface is to have a real conversation — and Lumo360 makes that possible at any scale, for a fraction of the cost of doing it manually.</p>
 
     <!-- three columns -->
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;">
+    <div class="whynow-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(255,255,255,0.07);border-radius:14px;overflow:hidden;">
 
-      <div style="background:rgba(255,255,255,0.03);padding:32px 28px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:rgba(49,120,198,0.15);border:1px solid rgba(49,120,198,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 4h12v2H4zM4 8h8v2H4zM4 12h6v2H4z" fill="rgba(147,191,234,0.9)"/></svg>
+      <div class="whynow-card" style="background:rgba(255,255,255,0.03);padding:32px 28px;">
+        <div class="whynow-icon" style="width:36px;height:36px;border-radius:10px;background:rgba(49,120,198,0.15);border:1px solid rgba(49,120,198,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 4h12v2H4zM4 8h8v2H4zM4 12h6v2H4z" fill="rgba(147,191,234,0.9)"/></svg>
         </div>
-        <div style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">75%</div>
-        <div style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">of candidates use AI to write their CV</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">Applications have never looked better — or meant less. The traditional filter is broken.</div>
+        <div class="whynow-body">
+          <div class="whynow-number" style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">75%</div>
+          <div class="whynow-label" style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">of candidates use AI to write their CV</div>
+          <div class="whynow-desc" style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">Applications have never looked better — or meant less. The traditional filter is broken.</div>
+        </div>
       </div>
 
-      <div style="background:rgba(255,255,255,0.03);padding:32px 28px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:rgba(49,120,198,0.15);border:1px solid rgba(49,120,198,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="rgba(147,191,234,0.9)" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="rgba(147,191,234,0.9)" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <div class="whynow-card" style="background:rgba(255,255,255,0.03);padding:32px 28px;">
+        <div class="whynow-icon" style="width:36px;height:36px;border-radius:10px;background:rgba(49,120,198,0.15);border:1px solid rgba(49,120,198,0.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="rgba(147,191,234,0.9)" stroke-width="1.5"/><path d="M10 6v4l3 2" stroke="rgba(147,191,234,0.9)" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
-        <div style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">3×</div>
-        <div style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">more time spent screening than two years ago</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">Volume is up, signal is down. Recruiters are working harder for worse shortlists.</div>
+        <div class="whynow-body">
+          <div class="whynow-number" style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">3×</div>
+          <div class="whynow-label" style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">more time spent screening than two years ago</div>
+          <div class="whynow-desc" style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">Volume is up, signal is down. Recruiters are working harder for worse shortlists.</div>
+        </div>
       </div>
 
-      <div style="background:rgba(255,255,255,0.03);padding:32px 28px;">
-        <div style="width:36px;height:36px;border-radius:10px;background:rgba(26,138,122,0.2);border:1px solid rgba(26,138,122,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
-          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="rgba(52,211,153,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="whynow-card" style="background:rgba(255,255,255,0.03);padding:32px 28px;">
+        <div class="whynow-icon" style="width:36px;height:36px;border-radius:10px;background:rgba(26,138,122,0.2);border:1px solid rgba(26,138,122,0.3);display:flex;align-items:center;justify-content:center;margin-bottom:18px;">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="rgba(52,211,153,0.9)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <div style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">~10 min</div>
-        <div style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">to know if a candidate has real substance</div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">A structured Lumo360 conversation gives you a defensible, evidence-backed answer — fast.</div>
+        <div class="whynow-body">
+          <div class="whynow-number" style="font-size:28px;font-weight:800;color:var(--white);letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">~10 min</div>
+          <div class="whynow-label" style="font-size:13px;font-weight:600;color:var(--ink-300);margin-bottom:8px;">to know if a candidate has real substance</div>
+          <div class="whynow-desc" style="font-size:12px;color:rgba(255,255,255,0.35);line-height:1.6;">A structured Lumo360 conversation gives you a defensible, evidence-backed answer — fast.</div>
+        </div>
       </div>
 
     </div>
+    <style>
+      @media (max-width: 860px) {
+        /* switch from a grid of tall cards to a compact divided list */
+        .whynow-grid {
+          display: flex !important;
+          flex-direction: column;
+          background: transparent !important;
+          border-radius: 0 !important;
+          gap: 0 !important;
+        }
+        .whynow-card {
+          background: transparent !important;
+          padding: 22px 0 !important;
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          display: flex !important;
+          align-items: flex-start;
+          gap: 16px;
+        }
+        .whynow-card:last-child { border-bottom: none; }
+        .whynow-icon { margin-bottom: 0 !important; flex-shrink: 0; margin-top: 2px; }
+        .whynow-body { flex: 1; min-width: 0; }
+        .whynow-number { font-size: 22px !important; margin-bottom: 4px !important; }
+        .whynow-label { margin-bottom: 6px !important; }
+      }
+    </style>
   </div>
 </div>
 
@@ -1254,7 +1316,7 @@
       <div class="step-card reveal">
         <div class="step-num">Step 01</div>
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <rect x="3" y="2" width="14" height="16" rx="2" stroke="#2060A8" stroke-width="1.5"/>
             <line x1="6" y1="6" x2="14" y2="6" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
             <line x1="6" y1="9.5" x2="14" y2="9.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
@@ -1268,7 +1330,7 @@
       <div class="step-card reveal">
         <div class="step-num">Step 02</div>
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M3 14.5V16a1 1 0 001 1h2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M17 14.5V16a1 1 0 01-1 1h-2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
             <path d="M3 5.5V4a1 1 0 011-1h2.5" stroke="#93BFEA" stroke-width="1.5" stroke-linecap="round"/>
@@ -1284,7 +1346,7 @@
       <div class="step-card reveal">
         <div class="step-num">Step 03</div>
         <div class="step-icon">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <rect x="2" y="3" width="16" height="14" rx="2" stroke="#2060A8" stroke-width="1.5"/>
             <line x1="2" y1="7.5" x2="18" y2="7.5" stroke="#93BFEA" stroke-width="1.5"/>
             <line x1="6" y1="11" x2="10" y2="11" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
@@ -1303,14 +1365,14 @@
   <div class="page">
     <div class="trust-header centered reveal">
       <div class="section-label">Built for Trust</div>
-      <h2 class="section-title">No hidden scoring. No black-box decisions.</h2>
+      <h2 class="section-title">Transparent AI candidate screening, with no hidden scoring</h2>
       <p class="section-sub">Every part of the evaluation is open, explainable, and reviewable — built for teams who need to stand behind their hiring decisions.</p>
     </div>
 
     <div class="trust-grid">
       <div class="trust-card reveal">
         <div class="trust-card-icon">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <rect x="2" y="2" width="12" height="12" rx="2" stroke="rgba(147,191,234,0.8)" stroke-width="1.5"/>
             <line x1="5" y1="5.5" x2="11" y2="5.5" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
             <line x1="5" y1="8" x2="11" y2="8" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
@@ -1322,7 +1384,7 @@
       </div>
       <div class="trust-card reveal">
         <div class="trust-card-icon">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <circle cx="8" cy="8" r="5.5" stroke="rgba(147,191,234,0.8)" stroke-width="1.5"/>
             <path d="M8 5v3l2.5 1.5" stroke="rgba(147,191,234,0.8)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -1332,7 +1394,7 @@
       </div>
       <div class="trust-card reveal">
         <div class="trust-card-icon">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <rect x="2" y="4" width="5" height="8" rx="1" stroke="rgba(147,191,234,0.8)" stroke-width="1.3"/>
             <rect x="9" y="4" width="5" height="8" rx="1" stroke="rgba(147,191,234,0.8)" stroke-width="1.3"/>
             <line x1="7" y1="8" x2="9" y2="8" stroke="rgba(147,191,234,0.5)" stroke-width="1.2" stroke-linecap="round"/>
@@ -1343,7 +1405,7 @@
       </div>
       <div class="trust-card reveal">
         <div class="trust-card-icon">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path d="M4 12L8 4l4 8" stroke="rgba(147,191,234,0.8)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <line x1="5.5" y1="9.5" x2="10.5" y2="9.5" stroke="rgba(147,191,234,0.5)" stroke-width="1.3" stroke-linecap="round"/>
           </svg>
@@ -1415,7 +1477,7 @@
     <div class="outcomes-grid">
       <div class="outcome-card reveal">
         <div class="outcome-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path d="M3 9L7 13L15 5" stroke="#2060A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
@@ -1424,7 +1486,7 @@
       </div>
       <div class="outcome-card reveal">
         <div class="outcome-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <circle cx="9" cy="9" r="6.5" stroke="#2060A8" stroke-width="1.5"/>
             <path d="M9 5.5v3.5l2.5 2" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -1434,7 +1496,7 @@
       </div>
       <div class="outcome-card reveal">
         <div class="outcome-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path d="M3 13.5L7.5 9l2.5 2.5L15 5" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
@@ -1443,7 +1505,7 @@
       </div>
       <div class="outcome-card reveal">
         <div class="outcome-icon">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <circle cx="9" cy="7" r="3" stroke="#2060A8" stroke-width="1.5"/>
             <path d="M3.5 15c0-3 2.5-4.5 5.5-4.5s5.5 1.5 5.5 4.5" stroke="#2060A8" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
@@ -1510,7 +1572,7 @@
       <h2 class="section-title">Designed for people.<br>Built for <em>trust.</em></h2>
       <p class="cta-sub">See how Lumo360 helps your team hire with confidence — without the black box.</p>
       <div class="cta-actions">
-        <a href="#" class="btn-primary-light">Book a demo <span>→</span></a>
+        <a href="#cta" class="btn-primary-light">Book a demo <span>→</span></a>
         <a href="#how" class="btn-ghost">See how it works</a>
       </div>
     </div>
@@ -1522,13 +1584,13 @@
   <div id="demo-backdrop" style="position:absolute; inset:0; background:rgba(13,31,53,0.55); backdrop-filter:blur(4px);"></div>
   <div style="position:relative; z-index:1; background:var(--white); border-radius:20px; padding:48px 44px; max-width:420px; width:90%; box-shadow:0 24px 80px rgba(13,31,53,0.18); text-align:center;">
     <div style="width:48px;height:48px;border-radius:12px;background:var(--ink-100);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-      <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 44 44" fill="none">
         <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
         <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
         <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
       </svg>
     </div>
-    <h3 style="font-family:var(--font-display);font-size:26px;color:var(--ink-900);margin-bottom:10px;font-weight:400;letter-spacing:-0.015em;">Book a demo</h3>
+    <h3 style="font-family:var(--font-display);font-size:26px;color:var(--ink-900);margin-bottom:10px;font-weight:600;letter-spacing:-0.028em;">Book a demo</h3>
     <p style="font-size:14px;color:var(--neutral-500);line-height:1.7;margin-bottom:28px;">Drop your email and we'll be in touch to find a time that works for you.</p>
 
     <div id="demo-form">
@@ -1547,7 +1609,7 @@
 
     <div id="demo-success" style="display:none;">
       <div style="width:48px;height:48px;border-radius:50%;background:var(--accent-teal-light);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="#1A8A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="#1A8A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
       <p style="font-size:15px;font-weight:600;color:var(--ink-900);margin-bottom:6px;">You're on the list!</p>
       <p style="font-size:13px;color:var(--neutral-500);">We'll be in touch very soon.</p>
@@ -1561,7 +1623,7 @@
 <footer class="footer">
   <div class="page">
     <div class="footer-left">
-      <svg width="18" height="18" viewBox="0 0 44 44" fill="none">
+      <svg aria-hidden="true" width="18" height="18" viewBox="0 0 44 44" fill="none">
         <circle cx="22" cy="22" r="16" stroke="#B0B8C4" stroke-width="2.5"
           stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
         <circle cx="22" cy="22" r="9" stroke="#B0B8C4" stroke-width="2"
@@ -1611,6 +1673,22 @@
     });
   }
   document.getElementById('demo-backdrop').addEventListener('click', closeDemo);
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.getElementById('nav-links');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
   document.querySelectorAll('a[href="#cta"], .nav-cta').forEach(el => {
     el.addEventListener('click', e => { e.preventDefault(); openDemo(); });
   });
