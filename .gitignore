@@ -4,3 +4,9 @@
 !.dev.vars.example
 .env*
 !.env.example
+
+# Python build cache
+__pycache__/
+
+# Python build cache
+__pycache__/
