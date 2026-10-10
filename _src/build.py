@@ -19,6 +19,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PAGES_DIR = ROOT / "_src" / "pages"
 sys.path.insert(0, str(PAGES_DIR))  # lets page files import _blocks
 SITE = "https://lumo360.io"
+ANALYTICS = """<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "459b66a3a97c4500aeb68c1223ba2dfc"}'></script>
+<!-- End Cloudflare Web Analytics -->
+"""
 FORM_ENDPOINT = "https://formspree.io/f/mzdyknoz"
 LASTMOD = "2026-10-09"
 # Case studies are hand-written static pages in the repo root, not generated.
@@ -337,7 +341,7 @@ def render(p, pages):
     navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   }});
 </script>
-</body>
+{ANALYTICS}</body>
 </html>
 """
 
