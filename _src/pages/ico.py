@@ -20,7 +20,7 @@ PAGE = {
             "questions organisations should ask before buying one. Here's what each means, what a good "
             "answer looks like, and how Lumo360 answers it."),
     "secondary": ("Go to the questions", "#questions"),
-    "related": ["automate-phone-screening", "hirevue-alternative", "ai-screening-for-recruitment-agencies"],
+    "related": ["eu-ai-act-recruitment", "automate-phone-screening", "hirevue-alternative"],
     "sections": [
         section(
             "context", "Background", "Why the ICO is asking",
