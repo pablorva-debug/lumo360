@@ -15,7 +15,7 @@ PAGE = {
             "spoken first-round interview that listens, asks follow-up questions, and shows your team the "
             "evidence behind every score."),
     "secondary": ("Compare the two formats", "#compare"),
-    "related": ["phone-screen-alternative", "hirevue-alternative", "ai-screening-for-recruitment-agencies"],
+    "related": ["automate-phone-screening", "hirevue-alternative", "ai-screening-for-recruitment-agencies"],
     "sections": [
         section(
             "problem", "The problem", "Why hiring teams are moving on from one-way video",
