@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, prose, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, prose, HOW_IT_WORKS
 
 PAGE = {
     "slug": "automate-phone-screening",
@@ -58,7 +58,6 @@ PAGE = {
                 "applicants per role to check fit, motivation and core competencies. That's where consistency "
                 "matters most, and where recruiter time is spread thinnest.",
             )),
-        four_tests(),
         HOW_IT_WORKS,
     ],
     "faqs": [

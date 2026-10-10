@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, prose, disclaimer, brand_disclaimer, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, prose, disclaimer, brand_disclaimer
 
 S = lambda n: f'<sup><a href="#src-{n}">{n}</a></sup>'
 
@@ -76,8 +76,6 @@ PAGE = {
                 "candidates who dislike recording themselves), a conversational interview gives you more to go "
                 "on, with less to watch.",
             )),
-        four_tests(),
-        HOW_IT_WORKS,
         section("note", "About this comparison", "How we wrote this page",
                 disclaimer(brand_disclaimer("Spark Hire")), cls="bg-white"),
     ],

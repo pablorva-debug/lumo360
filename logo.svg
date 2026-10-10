@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 44 44" fill="none">
+  <rect width="44" height="44" fill="#FFFFFF"/>
+  <g transform="translate(22 22) scale(0.82) translate(-22 -22)">
+    <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+    <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+    <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+  </g>
+</svg>

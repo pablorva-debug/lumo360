@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, checks, prose, disclaimer, brand_disclaimer, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, checks, prose, disclaimer, brand_disclaimer
 
 S = lambda n: f'<sup><a href="#src-{n}">{n}</a></sup>'
 
@@ -82,8 +82,6 @@ PAGE = {
                 "Our <a href=\"/ico-ai-recruitment-questions\">guide to the ICO's six questions</a> sets out how "
                 "to test any vendor, ours included.",
             )),
-        four_tests(),
-        HOW_IT_WORKS,
         section("note", "About this comparison", "How we wrote this page",
                 disclaimer(brand_disclaimer("HireVue")), cls="bg-white"),
     ],

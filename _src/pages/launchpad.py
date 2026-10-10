@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, checks, prose, disclaimer, brand_disclaimer, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, checks, prose, disclaimer, brand_disclaimer
 
 S = lambda n: f'<sup><a href="#src-{n}">{n}</a></sup>'
 
@@ -79,8 +79,6 @@ PAGE = {
                 "<a href=\"/automate-phone-screening\">automating the phone screen</a>, which many volume teams "
                 "are trying to replace.",
             )),
-        four_tests(),
-        HOW_IT_WORKS,
         section("note", "About this comparison", "How we wrote this page",
                 disclaimer(brand_disclaimer("LaunchPad Recruits")), cls="bg-white"),
     ],

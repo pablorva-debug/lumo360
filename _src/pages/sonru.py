@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, steps, prose, disclaimer, brand_disclaimer, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, steps, prose, disclaimer, brand_disclaimer
 
 S = lambda n: f'<sup><a href="#src-{n}">{n}</a></sup>'
 
@@ -77,8 +77,6 @@ PAGE = {
                 "have to perform to a camera. See how it compares across the "
                 "<a href=\"/one-way-video-interview-alternative\">one-way video category</a>.",
             )),
-        four_tests(),
-        HOW_IT_WORKS,
         section("note", "About this comparison", "How we wrote this page",
                 disclaimer(brand_disclaimer("Sonru")), cls="bg-white"),
     ],

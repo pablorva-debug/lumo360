@@ -1,4 +1,4 @@
-from _blocks import section, cards, compare, steps, prose, disclaimer, brand_disclaimer, HOW_IT_WORKS, four_tests
+from _blocks import section, cards, compare, steps, prose, disclaimer, brand_disclaimer
 
 S = lambda n: f'<sup><a href="#src-{n}">{n}</a></sup>'
 
@@ -73,8 +73,6 @@ PAGE = {
                 "Where Lumo360 helps is the stage before: the applicants per vacancy who each need a first "
                 "conversation. Screen them all consistently, then spend live time on the ones who earned it.",
             )),
-        four_tests(),
-        HOW_IT_WORKS,
         section("note", "About this comparison", "How we wrote this page",
                 disclaimer(brand_disclaimer("Odro") + " When we checked in October 2026, odro.com did not show a product page, so details here come from the third-party sources below, dated as shown. Please confirm Odro's current status and features before making a decision."), cls="bg-white"),
     ],
