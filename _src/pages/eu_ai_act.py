@@ -100,7 +100,8 @@ PAGE = {
                   "explain why in writing."], ""),
                 ("Emotion inference", "Does the tool infer emotions, from video, voice or text?",
                  ["Ask directly, and get the answer in the contract. This has been prohibited at work since "
-                  "February 2025."], ""),
+                  "February 2025."],
+                 "No. Lumo360 does not infer or score emotions from voice, face or text. It assesses job-related competencies only."),
                 ("Explanations", "Can a recruiter see why a candidate got a particular score?",
                  ["You will need this to meet the right to explanation, and to answer a rejected candidate's "
                   "question fairly."],
@@ -144,7 +145,8 @@ PAGE = {
          "and the duty to tell people they are interacting with an AI applies from 2 August 2026."),
         ("Can AI interviews analyse candidates' emotions?",
          "No. Since 2 February 2025 the EU AI Act prohibits using AI to infer emotions in the workplace, which "
-         "Commission guidance says includes recruitment, except for medical or safety reasons."),
+         "Commission guidance says includes recruitment, except for medical or safety reasons. Lumo360 does not "
+         "infer or score candidates' emotions."),
         ("Does the EU AI Act apply to UK companies?",
          "It can. The Act covers providers and deployers outside the EU where the AI system's output is used in "
          "the EU, for example a UK company hiring for roles in the EU. UK-only hiring is covered by UK GDPR and "
