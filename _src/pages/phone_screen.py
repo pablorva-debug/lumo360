@@ -15,7 +15,7 @@ PAGE = {
             "trust it. Lumo360 keeps the conversation and removes the calendar, so every applicant gets a "
             "first-round call, and your team gets the evidence."),
     "secondary": ("Compare the two", "#compare"),
-    "related": ["one-way-video-interview-alternative", "ai-screening-for-recruitment-agencies", "ico-ai-recruitment-questions"],
+    "related": ["structured-interviews", "one-way-video-interview-alternative", "ai-screening-for-recruitment-agencies"],
     "sections": [
         section(
             "problem", "The problem", "Where the screening call breaks down",

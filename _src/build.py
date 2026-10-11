@@ -35,6 +35,7 @@ ORDER = [
     "agencies",
     "ico",
     "eu_ai_act",
+    "structured",
     "hirevue",
     "spark_hire",
     "willo",
@@ -351,7 +352,7 @@ FOOTER_GROUPS = [
     ("Compare alternatives", ["one-way-video-interview-alternative", "hirevue-alternative", "spark-hire-alternative",
                               "willo-alternative", "sonru-alternative", "odro-alternative", "launchpad-alternative"]),
     ("Use cases", ["automate-phone-screening", "ai-screening-for-recruitment-agencies"]),
-    ("Guides and case studies", ["ico-ai-recruitment-questions", "eu-ai-act-recruitment"]),
+    ("Guides and case studies", ["ico-ai-recruitment-questions", "eu-ai-act-recruitment", "structured-interviews"]),
 ]
 STORY_LABELS = [("story-graduate-scheme", "Graduate scheme: 1,000 applicants"),
                 ("story-seasonal-hiring", "Seasonal hiring: 300 roles"),
