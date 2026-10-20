@@ -23,7 +23,6 @@ ANALYTICS = """<!-- Cloudflare Web Analytics -->
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "459b66a3a97c4500aeb68c1223ba2dfc"}'></script>
 <!-- End Cloudflare Web Analytics -->
 """
-FORM_ENDPOINT = "https://formspree.io/f/mzdyknoz"
 LASTMOD = "2026-10-09"
 # Case studies are hand-written static pages in the repo root, not generated.
 STORIES = ["story-graduate-scheme", "story-seasonal-hiring", "story-tech-scaleup"]
@@ -162,6 +161,7 @@ def sources_html(sources):
 
 def render(p, pages):
     url = f'{SITE}/{p["slug"]}'
+    demo = f'/start?src={p["slug"]}&amp;intent=demo'
     sections = "\n\n".join(p["sections"])
     cta = p.get("cta", {})
     cta_title = cta.get("title", "Give candidates a conversation.<br>Give your team <em>the evidence.</em>")
@@ -217,7 +217,7 @@ def render(p, pages):
       <li><a href="/#faq">FAQ</a></li>
     </ul>
     <div style="display:flex; align-items:center; gap:8px;">
-      <a href="#demo" class="nav-cta js-demo">Book a demo</a>
+      <a href="{demo}" class="nav-cta">Book a demo</a>
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
     </div>
   </div>
@@ -230,7 +230,7 @@ def render(p, pages):
     <h1>{p["h1"]}</h1>
     <p class="hero-sub">{p["sub"]}</p>
     <div class="hero-actions">
-      <a href="#demo" class="btn-primary js-demo">Book a demo <span aria-hidden="true">→</span></a>{secondary_html}
+      <a href="{demo}" class="btn-primary">Book a demo <span aria-hidden="true">→</span></a>{secondary_html}
     </div>
   </div>
 </header>
@@ -248,7 +248,7 @@ def render(p, pages):
     <div class="cta-block">
       <h2 class="section-title">{cta_title}</h2>
       <p class="cta-sub">{cta_sub}</p>
-      <a href="#demo" class="btn-primary-light js-demo">Book a demo <span aria-hidden="true">→</span></a>
+      <a href="{demo}" class="btn-primary-light">Book a demo <span aria-hidden="true">→</span></a>
     </div>
   </div>
 </section>
@@ -273,68 +273,7 @@ def render(p, pages):
   </div>
 </footer>
 
-<div id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="demo-title">
-  <div class="modal-backdrop" id="demo-backdrop"></div>
-  <div class="modal-card">
-    <h3 id="demo-title">Book a demo</h3>
-    <p>Drop your email and we'll be in touch to find a time that works for you.</p>
-    <div id="demo-form">
-      <input id="demo-email" type="email" placeholder="your@email.com" autocomplete="email" aria-label="Work email">
-      <button class="btn-primary" id="demo-submit" type="button">Request my demo →</button>
-      <p id="demo-error">Please enter a valid email address.</p>
-    </div>
-    <div id="demo-success">
-      <p style="font-size:15px;font-weight:600;color:var(--ink-900);margin:20px 0 6px;">You're on the list!</p>
-      <p>We'll be in touch very soon.</p>
-    </div>
-    <button class="modal-close" id="demo-close" type="button" aria-label="Close">✕</button>
-  </div>
-</div>
-
 <script>
-  // Page identifier sent with demo requests so you can see which landing page converts
-  const PAGE_SOURCE = '{p["slug"]}';
-
-  const modal = document.getElementById('demo-modal');
-  function openDemo(e) {{
-    if (e) e.preventDefault();
-    modal.style.display = 'flex';
-    document.getElementById('demo-success').style.display = 'none';
-    document.getElementById('demo-form').style.display = 'block';
-    document.getElementById('demo-error').style.display = 'none';
-    document.getElementById('demo-email').focus();
-  }}
-  function closeDemo() {{ modal.style.display = 'none'; }}
-  function submitDemo() {{
-    const email = document.getElementById('demo-email').value.trim();
-    const err = document.getElementById('demo-error');
-    if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email)) {{
-      err.textContent = 'Please enter a valid email address.';
-      err.style.display = 'block';
-      return;
-    }}
-    fetch('{FORM_ENDPOINT}', {{
-      method: 'POST',
-      headers: {{ 'Content-Type': 'application/json', 'Accept': 'application/json' }},
-      body: JSON.stringify({{ email, source: PAGE_SOURCE, _subject: 'Lumo360 demo request (' + PAGE_SOURCE + ')' }})
-    }})
-    .then(res => {{ if (!res.ok) throw new Error(); return res.json(); }})
-    .then(() => {{
-      document.getElementById('demo-form').style.display = 'none';
-      document.getElementById('demo-success').style.display = 'block';
-    }})
-    .catch(() => {{
-      err.textContent = 'Something went wrong. Please try again.';
-      err.style.display = 'block';
-    }});
-  }}
-  document.querySelectorAll('.js-demo').forEach(el => el.addEventListener('click', openDemo));
-  document.getElementById('demo-backdrop').addEventListener('click', closeDemo);
-  document.getElementById('demo-close').addEventListener('click', closeDemo);
-  document.getElementById('demo-submit').addEventListener('click', submitDemo);
-  document.getElementById('demo-email').addEventListener('keydown', e => {{ if (e.key === 'Enter') submitDemo(); }});
-  document.addEventListener('keydown', e => {{ if (e.key === 'Escape') closeDemo(); }});
-
   const navToggle = document.getElementById('nav-toggle');
   const navLinks = document.getElementById('nav-links');
   navToggle.addEventListener('click', () => {{
