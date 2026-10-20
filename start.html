@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get started with Lumo360</title>
+<meta name="description" content="Tell us about you and your hiring to start a free Lumo360 trial or book a walkthrough with the team.">
+<meta name="robots" content="noindex, follow">
+<link rel="canonical" href="https://lumo360.io/start">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='16' stroke='%231A3252' stroke-width='2.5' stroke-dasharray='84 16' stroke-dashoffset='4' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='22' cy='22' r='9' stroke='%232060A8' stroke-width='2' stroke-dasharray='44 12' stroke-dashoffset='-8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='22' cy='22' r='2.5' fill='%232060A8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/landing.css">
+<style>
+  .start { padding: 120px 0 88px; position: relative; }
+  .start::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse 60% 45% at 75% 15%, rgba(49,120,198,0.08) 0%, transparent 70%);
+  }
+  .start .page { position: relative; z-index: 1; }
+  .start-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 64px; align-items: start; }
+  .start h1 {
+    font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.1; letter-spacing: -0.034em; color: var(--ink-900); margin-bottom: 18px;
+  }
+  .start h1 em { font-style: normal; color: var(--ink-500); }
+  .start-sub { font-size: 16.5px; color: var(--neutral-700); line-height: 1.7; margin-bottom: 32px; max-width: 440px; }
+  .offer { display: flex; flex-direction: column; gap: 14px; }
+  .offer-card { background: var(--white); border: var(--border-default); border-radius: var(--radius-card); padding: 20px 22px; }
+  .offer-card h2 { font-family: var(--font-display); font-size: 16px; font-weight: 600; color: var(--ink-900); letter-spacing: -0.015em; margin-bottom: 6px; }
+  .offer-card p { font-size: 14px; color: var(--neutral-700); line-height: 1.6; }
+
+  .card { background: var(--white); border: var(--border-default); border-radius: 20px; padding: 36px 36px 32px; box-shadow: 0 12px 40px rgba(13,31,53,0.06); }
+  .steps { display: flex; gap: 8px; margin-bottom: 26px; }
+  .steps span { flex: 1; height: 4px; border-radius: 4px; background: var(--neutral-200); transition: background 0.3s; }
+  .steps span.on { background: var(--ink-600); }
+  .step-label { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-500); margin-bottom: 6px; }
+  .step-title { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--ink-900); letter-spacing: -0.025em; margin-bottom: 24px; }
+  fieldset.step { border: none; display: none; }
+  fieldset.step.active { display: block; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { margin-bottom: 18px; }
+  .field > label, .field > .legend { display: block; font-size: 13px; font-weight: 600; color: var(--ink-900); margin-bottom: 7px; }
+  .opt { font-weight: 400; color: var(--neutral-500); }
+  input[type=text], input[type=email], input[type=tel], input[type=url], select, textarea {
+    width: 100%; padding: 12px 14px; border: 1.5px solid var(--neutral-200); border-radius: 10px;
+    font-family: var(--font-body); font-size: 15px; color: var(--ink-900); background: var(--white);
+    outline: none; transition: border-color 0.2s;
+  }
+  select { appearance: none; -webkit-appearance: none; padding-right: 36px; cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%236B7280' stroke-width='1.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center; }
+  textarea { min-height: 84px; resize: vertical; }
+  input:focus, select:focus, textarea:focus { border-color: var(--ink-400); }
+  .invalid input, .invalid select, .invalid .choices { border-color: #B91C1C; }
+  .err { display: none; color: #B91C1C; font-size: 12px; margin-top: 6px; }
+  .invalid .err { display: block; }
+  .hint { font-size: 12px; color: var(--neutral-500); margin-top: 6px; }
+  .hint.warn { color: #9A6700; }
+
+  .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; border-radius: 12px; border: 1.5px solid transparent; }
+  .choice { position: relative; }
+  .choice input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .choice span {
+    display: block; padding: 11px 14px; border: 1.5px solid var(--neutral-200); border-radius: 10px;
+    font-size: 14px; color: var(--neutral-700); line-height: 1.4; transition: border-color 0.2s, background 0.2s, color 0.2s; cursor: pointer;
+  }
+  .choice span small { display: block; font-size: 12px; color: var(--neutral-500); margin-top: 2px; }
+  .choice input:checked + span { border-color: var(--ink-600); background: var(--ink-50); color: var(--ink-900); }
+  .choice input:focus-visible + span { outline: 2px solid var(--ink-400); outline-offset: 2px; }
+
+  .field > label.tickrow { display: flex; font-weight: 400; color: var(--neutral-700); margin-bottom: 0; }
+  .field:has(> label.tickrow) { margin-bottom: 12px; }
+  .nav .btn-back { text-decoration: none; font-size: 13px; }
+  .tickrow { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--neutral-700); line-height: 1.55; margin-bottom: 12px; cursor: pointer; }
+  .tickrow input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--ink-600); flex-shrink: 0; }
+  .actions { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 26px; }
+  .actions .btn-primary { padding: 13px 26px; }
+  .btn-back { background: none; border: none; font-family: var(--font-body); font-size: 14px; font-weight: 500; color: var(--neutral-500); cursor: pointer; padding: 8px 0; }
+  .btn-back:hover { color: var(--ink-700); }
+  .btn-primary[disabled] { opacity: 0.6; cursor: default; transform: none; }
+  #form-error { display: none; color: #B91C1C; font-size: 13px; margin-top: 14px; }
+  #done { display: none; text-align: center; padding: 28px 8px; }
+  #done .tick { width: 52px; height: 52px; border-radius: 50%; background: var(--accent-teal-light); display: flex; align-items: center; justify-content: center; margin: 0 auto 18px; }
+  #done h2 { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--ink-900); letter-spacing: -0.025em; margin-bottom: 8px; }
+  #done p { font-size: 15px; color: var(--neutral-700); line-height: 1.7; }
+  .hidden { display: none !important; }
+
+  @media (max-width: 900px) {
+    .start { padding-top: 96px; }
+    .start-grid { grid-template-columns: 1fr; gap: 32px; }
+    .offer { flex-direction: row; flex-wrap: wrap; }
+    .offer-card { flex: 1 1 220px; }
+  }
+  @media (max-width: 560px) {
+    .card { padding: 26px 20px 24px; border-radius: 16px; }
+    .row, .choices { grid-template-columns: 1fr; gap: 0 16px; }
+    .choices { gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="page">
+    <a href="/" class="nav-left" aria-label="Lumo360 home">
+      <svg aria-hidden="true" width="30" height="30" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="16" stroke="#1A3252" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="9" stroke="#2060A8" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+        <circle cx="22" cy="22" r="2.5" fill="#2060A8"/>
+      </svg>
+      <span class="nav-wordmark">Lumo<span>360</span></span>
+    </a>
+    <a href="/" class="btn-back">← Back to site</a>
+  </div>
+</nav>
+
+<main class="start">
+  <div class="page">
+    <div class="start-grid">
+
+      <div>
+        <p class="hero-kicker">Get started</p>
+        <h1>Let's get you set up <em>properly.</em></h1>
+        <p class="start-sub">Tell us a little about you and your hiring. It takes about two minutes.</p>
+        <div class="offer">
+          <div class="offer-card">
+            <h2>Try it yourself</h2>
+            <p>25 free credits: enough to screen 5 CVs and interview 2 candidates on a real role. No card needed.</p>
+          </div>
+          <div class="offer-card">
+            <h2>Or see it with us</h2>
+            <p>A walkthrough of a Lumo360 interview and the report it produces, using one of your own job descriptions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="start-form" novalidate>
+          <div class="steps" aria-hidden="true"><span class="on" id="bar-1"></span><span id="bar-2"></span></div>
+
+          <!-- STEP 1 -->
+          <fieldset class="step active" id="step-1">
+            <p class="step-label">Step 1 of 2</p>
+            <h2 class="step-title">About you</h2>
+
+            <div class="row">
+              <div class="field" data-req>
+                <label for="name">Full name</label>
+                <input id="name" name="name" type="text" autocomplete="name">
+                <p class="err">Please enter your name.</p>
+              </div>
+              <div class="field" data-req>
+                <label for="job_title">Job title</label>
+                <input id="job_title" name="job_title" type="text" autocomplete="organization-title">
+                <p class="err">Please enter your job title.</p>
+              </div>
+            </div>
+
+            <div class="field" data-req data-type="email">
+              <label for="email">Work email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@company.com">
+              <p class="hint warn hidden" id="email-hint">If you have a company email address, please use that one.</p>
+              <p class="err">Please enter a valid email address.</p>
+            </div>
+
+            <div class="row">
+              <div class="field" data-req>
+                <label for="company">Company</label>
+                <input id="company" name="company" type="text" autocomplete="organization">
+                <p class="err">Please enter your company name.</p>
+              </div>
+              <div class="field">
+                <label for="website">Company website <span class="opt">(optional)</span></label>
+                <input id="website" name="website" type="text" inputmode="url" placeholder="company.com">
+              </div>
+            </div>
+
+            <div class="field" data-req>
+              <label for="company_size">Company size</label>
+              <select id="company_size" name="company_size">
+                <option value="">Select…</option>
+                <option>1–10 employees</option>
+                <option>11–50 employees</option>
+                <option>51–250 employees</option>
+                <option>251–1,000 employees</option>
+                <option>1,000+ employees</option>
+              </select>
+              <p class="err">Please choose your company size.</p>
+            </div>
+
+            <div class="actions">
+              <span></span>
+              <button type="button" class="btn-primary" id="next">Continue <span aria-hidden="true">→</span></button>
+            </div>
+          </fieldset>
+
+          <!-- STEP 2 -->
+          <fieldset class="step" id="step-2">
+            <p class="step-label">Step 2 of 2</p>
+            <h2 class="step-title">About your hiring</h2>
+
+            <div class="field" data-req data-group="org_type">
+              <span class="legend" id="org-legend">Which best describes your organisation?</span>
+              <div class="choices" role="radiogroup" aria-labelledby="org-legend">
+                <label class="choice"><input type="radio" name="org_type" value="In-house HR / talent team"><span>In-house HR or talent team</span></label>
+                <label class="choice"><input type="radio" name="org_type" value="Recruitment agency"><span>Recruitment agency</span></label>
+                <label class="choice"><input type="radio" name="org_type" value="RPO"><span>RPO</span></label>
+                <label class="choice"><input type="radio" name="org_type" value="Other"><span>Something else</span></label>
+              </div>
+              <p class="err">Please choose one.</p>
+            </div>
+
+            <div class="row">
+              <div class="field" data-req>
+                <label for="hires_per_year">Hires per year <span class="opt">(roughly)</span></label>
+                <select id="hires_per_year" name="hires_per_year">
+                  <option value="">Select…</option>
+                  <option>Fewer than 20</option>
+                  <option>20–100</option>
+                  <option>100–500</option>
+                  <option>500–2,000</option>
+                  <option>More than 2,000</option>
+                </select>
+                <p class="err">Please choose a range.</p>
+              </div>
+              <div class="field" data-req>
+                <label for="country">Where you hire</label>
+                <select id="country" name="country">
+                  <option value="">Select…</option>
+                  <option>United Kingdom</option>
+                  <option>Ireland</option>
+                  <option>Elsewhere in the EU</option>
+                  <option>United States</option>
+                  <option>Several regions</option>
+                  <option>Other</option>
+                </select>
+                <p class="err">Please choose one.</p>
+              </div>
+            </div>
+
+            <div class="field" data-req data-group="role_types">
+              <span class="legend" id="roles-legend">What kinds of roles do you hire for? <span class="opt">(choose any)</span></span>
+              <div class="choices" role="group" aria-labelledby="roles-legend">
+                <label class="choice"><input type="checkbox" name="role_types" value="Graduate / early careers"><span>Graduate or early careers</span></label>
+                <label class="choice"><input type="checkbox" name="role_types" value="Volume / seasonal"><span>Volume or seasonal</span></label>
+                <label class="choice"><input type="checkbox" name="role_types" value="Professional / office"><span>Professional or office</span></label>
+                <label class="choice"><input type="checkbox" name="role_types" value="Tech / engineering"><span>Tech or engineering</span></label>
+              </div>
+              <p class="err">Please choose at least one.</p>
+            </div>
+
+            <div class="field" data-req>
+              <label for="current_screening">How do you screen candidates today?</label>
+              <select id="current_screening" name="current_screening">
+                <option value="">Select…</option>
+                <option>Phone screens by our team</option>
+                <option>One-way video interview tool</option>
+                <option>Another AI interview tool</option>
+                <option>CV review only</option>
+                <option>Nothing structured yet</option>
+              </select>
+              <p class="err">Please choose one.</p>
+            </div>
+
+            <div class="field hidden" id="tool-field">
+              <label for="current_tool">Which tool? <span class="opt">(optional)</span></label>
+              <input id="current_tool" name="current_tool" type="text" placeholder="e.g. HireVue, Willo, Sonru">
+            </div>
+
+            <div class="field" data-req data-group="next_step">
+              <span class="legend" id="next-legend">What would you like to do first?</span>
+              <div class="choices" role="radiogroup" aria-labelledby="next-legend">
+                <label class="choice"><input type="radio" name="next_step" value="Free trial"><span>Try it myself<small>Use the 25 free credits</small></span></label>
+                <label class="choice"><input type="radio" name="next_step" value="Walkthrough"><span>See a walkthrough<small>With someone from the team</small></span></label>
+              </div>
+              <p class="err">Please choose one.</p>
+            </div>
+
+            <div class="field hidden" id="phone-field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label for="notes">Anything else we should know? <span class="opt">(optional)</span></label>
+              <textarea id="notes" name="notes"></textarea>
+            </div>
+
+            <div class="field" data-req data-group="consent">
+              <label class="tickrow"><input type="checkbox" name="consent" value="yes"> <span>I agree that Lumo360 can use these details to respond to my request.</span></label>
+              <p class="err">Please tick this box so we can reply to you.</p>
+            </div>
+            <label class="tickrow"><input type="checkbox" name="updates" value="yes"> <span>Send me occasional product updates. <span class="opt">(optional)</span></span></label>
+
+            <div class="actions">
+              <button type="button" class="btn-back" id="back">← Back</button>
+              <button type="submit" class="btn-primary" id="submit">Send <span aria-hidden="true">→</span></button>
+            </div>
+            <p id="form-error" role="alert">Something went wrong. Please try again, or email us if it keeps happening.</p>
+          </fieldset>
+        </form>
+
+        <div id="done" role="status">
+          <div class="tick"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20" fill="none"><path d="M4 10.5L8 14.5L16 6.5" stroke="#1A8A7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h2 id="done-title">Thank you.</h2>
+          <p>We've got your details and we'll be in touch by email.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="page">
+    <div class="footer-row">
+      <div class="footer-left">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 44 44" fill="none">
+          <circle cx="22" cy="22" r="16" stroke="#B0B8C4" stroke-width="2.5" stroke-dasharray="84 16" stroke-dashoffset="4" stroke-linecap="round"/>
+          <circle cx="22" cy="22" r="9" stroke="#B0B8C4" stroke-width="2" stroke-dasharray="44 12" stroke-dashoffset="-8" stroke-linecap="round"/>
+          <circle cx="22" cy="22" r="2.5" fill="#B0B8C4"/>
+        </svg>
+        <span class="footer-copy">Screening Intelligence · Lumo360</span>
+      </div>
+      <span class="footer-tagline">Designed for people. Built for trust.</span>
+      <span class="footer-copy">© 2026 Lumo360. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var FORM_ENDPOINT = 'https://formspree.io/f/mzdyknoz';
+  var PERSONAL_DOMAINS = ['gmail.com','googlemail.com','hotmail.com','hotmail.co.uk','outlook.com','live.com','live.co.uk',
+    'msn.com','yahoo.com','yahoo.co.uk','icloud.com','me.com','mac.com','aol.com','proton.me','protonmail.com','gmx.com','gmx.de',
+    'mail.com','btinternet.com','sky.com','virginmedia.com','talktalk.net','ymail.com','zoho.com'];
+
+  var form = document.getElementById('start-form');
+  var params = new URLSearchParams(location.search);
+  var src = params.get('src') || 'direct';
+  var intent = params.get('intent') || 'trial';
+
+  // Pre-select the first step based on which button they clicked
+  var pre = form.querySelector('input[name="next_step"][value="' + (intent === 'demo' ? 'Walkthrough' : 'Free trial') + '"]');
+  if (pre) pre.checked = true;
+
+  function emailDomain(v) { var i = v.lastIndexOf('@'); return i < 0 ? '' : v.slice(i + 1).toLowerCase().trim(); }
+  function isPersonal(v) { return PERSONAL_DOMAINS.indexOf(emailDomain(v)) !== -1; }
+
+  // Field validation: every .field[data-req] inside a step must be filled
+  function fieldOk(f) {
+    var group = f.getAttribute('data-group');
+    if (group) return form.querySelectorAll('input[name="' + group + '"]:checked').length > 0;
+    var el = f.querySelector('input, select');
+    var v = (el.value || '').trim();
+    if (f.getAttribute('data-type') === 'email') return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    return v.length > 0;
+  }
+  function validate(step) {
+    var first = null;
+    step.querySelectorAll('.field[data-req]').forEach(function (f) {
+      if (f.classList.contains('hidden')) return;
+      var ok = fieldOk(f);
+      f.classList.toggle('invalid', !ok);
+      if (!ok && !first) first = f;
+    });
+    if (first) { var el = first.querySelector('input, select'); if (el) el.focus(); }
+    return !first;
+  }
+  form.addEventListener('input', function (e) {
+    var f = e.target.closest('.field');
+    if (f && f.classList.contains('invalid') && fieldOk(f)) f.classList.remove('invalid');
+  });
+  form.addEventListener('change', function (e) {
+    var f = e.target.closest('.field');
+    if (f && f.classList.contains('invalid') && fieldOk(f)) f.classList.remove('invalid');
+  });
+
+  // Gentle nudge towards a work email (never blocks)
+  var email = document.getElementById('email');
+  email.addEventListener('blur', function () {
+    document.getElementById('email-hint').classList.toggle('hidden', !isPersonal(email.value));
+  });
+
+  // Conditional fields
+  var screening = document.getElementById('current_screening');
+  screening.addEventListener('change', function () {
+    var show = /tool/i.test(screening.value);
+    document.getElementById('tool-field').classList.toggle('hidden', !show);
+  });
+  function syncPhone() {
+    var w = form.querySelector('input[name="next_step"][value="Walkthrough"]').checked;
+    document.getElementById('phone-field').classList.toggle('hidden', !w);
+  }
+  form.querySelectorAll('input[name="next_step"]').forEach(function (r) { r.addEventListener('change', syncPhone); });
+  syncPhone();
+
+  // Step navigation
+  var s1 = document.getElementById('step-1'), s2 = document.getElementById('step-2');
+  function go(n) {
+    s1.classList.toggle('active', n === 1);
+    s2.classList.toggle('active', n === 2);
+    document.getElementById('bar-2').classList.toggle('on', n === 2);
+    form.closest('.card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  document.getElementById('next').addEventListener('click', function () { if (validate(s1)) go(2); });
+  document.getElementById('back').addEventListener('click', function () { go(1); });
+  s1.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && e.target.tagName === 'INPUT') { e.preventDefault(); document.getElementById('next').click(); }
+  });
+
+  // Submit to Formspree
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!validate(s1)) { go(1); return; }
+    if (!validate(s2)) return;
+
+    var data = {};
+    new FormData(form).forEach(function (v, k) {
+      v = typeof v === 'string' ? v.trim() : v;
+      if (v === '') return;
+      if (k === 'role_types') { (data[k] = data[k] || []).push(v); } else { data[k] = v; }
+    });
+    if (data.role_types) data.role_types = data.role_types.join(', ');
+    data.email_type = isPersonal(data.email) ? 'Personal' : 'Company';
+    data.source_button = src;
+    data.source_intent = intent;
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(function (k) {
+      if (params.get(k)) data[k] = params.get(k);
+    });
+    if (document.referrer) data.referrer = document.referrer;
+    data._replyto = data.email;
+    data._subject = 'Lumo360 application: ' + (data.company || '') + ' (' + (data.next_step || '') + ')';
+
+    var btn = document.getElementById('submit');
+    var errEl = document.getElementById('form-error');
+    btn.disabled = true; errEl.style.display = 'none';
+
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function (res) { if (!res.ok) throw new Error(res.status); return res.json(); })
+    .then(function () {
+      var first = (data.name || '').split(' ')[0];
+      document.getElementById('done-title').textContent = first ? 'Thank you, ' + first + '.' : 'Thank you.';
+      form.style.display = 'none';
+      document.getElementById('done').style.display = 'block';
+    })
+    .catch(function () { errEl.style.display = 'block'; btn.disabled = false; });
+  });
+})();
+</script>
+<!-- Cloudflare Web Analytics -->
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "459b66a3a97c4500aeb68c1223ba2dfc"}'></script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>

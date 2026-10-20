@@ -23,8 +23,8 @@ for p in pages:
     for m in re.findall(r"\[TO CONFIRM[^\]]*\]", s):
         problems.append(f"{name}: placeholder {m[:90]}")
     for href in re.findall(r'href="(/[^"#]*)', s):
-        target = href.strip("/")
-        if target and target not in slugs and not (ROOT / target).exists():
+        target = href.split("?")[0].strip("/")
+        if target and target not in slugs and not (ROOT / target).exists() and not (ROOT / f"{target}.html").exists():
             problems.append(f"{name}: broken internal link {href}")
     refs = set(re.findall(r'href="#(src-\d+)"', s))
     ids = set(re.findall(r'id="(src-\d+)"', s))
