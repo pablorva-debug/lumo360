@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get started with Lumo360</title>
-<meta name="description" content="Tell us about you and your hiring to start a free Lumo360 trial or book a walkthrough with the team.">
+<meta name="description" content="Tell us about you and your hiring to start a free Lumo360 trial or book a demo with the team.">
 <meta name="robots" content="noindex, follow">
 <link rel="canonical" href="https://lumo360.io/start">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='16' stroke='%231A3252' stroke-width='2.5' stroke-dasharray='84 16' stroke-dashoffset='4' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='22' cy='22' r='9' stroke='%232060A8' stroke-width='2' stroke-dasharray='44 12' stroke-dashoffset='-8' stroke-linecap='round' fill='none'/%3E%3Ccircle cx='22' cy='22' r='2.5' fill='%232060A8'/%3E%3C/svg%3E">
@@ -130,8 +130,8 @@
             <p>25 free credits: enough to screen 5 CVs and interview 2 candidates on a real role. No card needed.</p>
           </div>
           <div class="offer-card">
-            <h2>Or see it with us</h2>
-            <p>A walkthrough of a Lumo360 interview and the report it produces, using one of your own job descriptions.</p>
+            <h2>Or book a demo</h2>
+            <p>A live demo with our team: we'll show you a Lumo360 interview and the report it produces, using one of your own job descriptions.</p>
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@
               <span class="legend" id="next-legend">What would you like to do first?</span>
               <div class="choices" role="radiogroup" aria-labelledby="next-legend">
                 <label class="choice"><input type="radio" name="next_step" value="Free trial"><span>Try it myself<small>Use the 25 free credits</small></span></label>
-                <label class="choice"><input type="radio" name="next_step" value="Walkthrough"><span>See a walkthrough<small>With someone from the team</small></span></label>
+                <label class="choice"><input type="radio" name="next_step" value="Demo"><span>Book a demo<small>A live demo with our team</small></span></label>
               </div>
               <p class="err">Please choose one.</p>
             </div>
@@ -343,7 +343,7 @@
   var intent = params.get('intent') || 'trial';
 
   // Pre-select the first step based on which button they clicked
-  var pre = form.querySelector('input[name="next_step"][value="' + (intent === 'demo' ? 'Walkthrough' : 'Free trial') + '"]');
+  var pre = form.querySelector('input[name="next_step"][value="' + (intent === 'demo' ? 'Demo' : 'Free trial') + '"]');
   if (pre) pre.checked = true;
 
   function emailDomain(v) { var i = v.lastIndexOf('@'); return i < 0 ? '' : v.slice(i + 1).toLowerCase().trim(); }
@@ -391,7 +391,7 @@
     document.getElementById('tool-field').classList.toggle('hidden', !show);
   });
   function syncPhone() {
-    var w = form.querySelector('input[name="next_step"][value="Walkthrough"]').checked;
+    var w = form.querySelector('input[name="next_step"][value="Demo"]').checked;
     document.getElementById('phone-field').classList.toggle('hidden', !w);
   }
   form.querySelectorAll('input[name="next_step"]').forEach(function (r) { r.addEventListener('change', syncPhone); });
