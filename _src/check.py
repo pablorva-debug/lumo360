@@ -37,6 +37,13 @@ for p in pages:
     if s.count("<h1") != 1:
         problems.append(f"{name}: expected exactly one h1")
 
+# Placeholders anywhere on the site (hand-written pages too)
+for f in sorted(ROOT.glob("*.html")):
+    if f.stem in slugs:
+        continue
+    for m in re.findall(r"\[TO CONFIRM[^\]]*\]", f.read_text()):
+        problems.append(f"{f.name}: placeholder {m[:90]}")
+
 for line in problems:
     print("•", line)
 print(f"\n{len(pages)} pages checked, {len(problems)} issue(s).")
